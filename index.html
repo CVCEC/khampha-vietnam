@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Khám phá Việt Nam | Trường Tiếng Việt Của Em</title>
+  <meta name="description" content="Cùng Trâu Con đi dọc dải đất chữ S từ Cột cờ Lũng Cú tới Đất Mũi Cà Mau, ghé thăm quần đảo Hoàng Sa và Trường Sa, thu thập 31 ngôi sao vàng.">
+  <meta name="theme-color" content="#F4F0EA">
+  <meta property="og:title" content="Khám phá Việt Nam cùng Trâu Con">
+  <meta property="og:description" content="Hành trình 31 trạm từ Lũng Cú tới Cà Mau – học tiếng Việt và văn hoá Việt Nam cho các bạn nhỏ.">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&subset=vietnamese&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="https://truongtiengvietcuaem.cvcec.org" title="Về Trường Tiếng Việt Của Em">
+      <img data-asset="logo" class="hidden" alt="Trường Tiếng Việt Của Em">
+      <span class="ttl"><b>Khám phá Việt Nam</b><span>Từ Lũng Cú đến Mũi Cà Mau</span></span>
+    </a>
+    <span class="sp"></span>
+    <span class="star-pill" title="Ngôi sao vàng đã thu thập">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 61,38 95,38 68,58 78,92 50,72 22,92 32,58 5,38 39,38" fill="#F7C531" stroke="#C98400" stroke-width="5" stroke-linejoin="round"/></svg>
+      <span id="starCount">0/31</span>
+    </span>
+    <button class="icon-btn" id="passBtn" aria-label="Hộ chiếu"><span class="emo">📘</span><span class="lbl">Hộ chiếu</span></button>
+    <button class="icon-btn" id="badgeBtn" aria-label="Huy hiệu"><span class="emo">🏅</span><span class="lbl">Huy hiệu</span></button>
+    <button class="icon-btn" id="setBtn" aria-label="Cài đặt"><span class="emo">⚙️</span></button>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <img class="mascot hidden" data-asset="mascot" alt="Trâu Con vẫy tay chào">
+      <div class="bubble"><h1 id="heroTitle">Chào các bạn! Mình là Trâu Con.</h1><p id="heroText">Cùng mình đi dọc chữ S từ Cột cờ Lũng Cú tới Đất Mũi Cà Mau nhé!</p></div>
+    </section>
+    <div class="chang-row" id="changRow"></div>
+
+    <section class="map-card" aria-label="Bản đồ hành trình">
+      <div class="map-tools">
+        <button id="zIn" aria-label="Phóng to">＋</button>
+        <button id="zOut" aria-label="Thu nhỏ">－</button>
+        <button id="zFit" aria-label="Xem toàn bản đồ"><span class="emo" style="font-size:19px">🗺️</span></button>
+        <button id="zMe" aria-label="Tìm Trâu Con"><span class="emo" style="font-size:19px">📍</span></button>
+      </div>
+      <div class="map-scroll" id="mapScroll"></div>
+      <div class="map-legend"><span>⭐ Đã có sao</span><span>🔒 Chưa mở</span><span>⛴️ Đường biển</span></div>
+    </section>
+  </main>
+
+  <div class="nextbar"><button class="btn" id="nextBtn">▶ Bắt đầu</button></div>
+
+  <footer>
+    <div>Copyrighted by CVCEC Trường Tiếng Việt Của Em 2026</div>
+    <div>Bản đồ vẽ từ dữ liệu Natural Earth (theo quan điểm Việt Nam), có đầy đủ quần đảo Hoàng Sa và Trường Sa. Tỉnh, thành ghi theo địa giới mới từ 1/7/2025.</div>
+    <div>Giọng Trâu Con là giọng AI (Google AI Studio). Câu nào chưa có giọng AI sẽ đọc bằng giọng máy của thiết bị. · <a href="https://truongtiengvietcuaem.cvcec.org">Trường Tiếng Việt Của Em</a></div>
+  </footer>
+
+  <div id="printArea"></div>
+
+  <script src="js/mapdata.js"></script>
+  <script src="js/stops.js"></script>
+  <script src="js/audio-manifest.js"></script>
+  <script src="js/video-manifest.js"></script>
+  <script src="js/phrases.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/games.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
