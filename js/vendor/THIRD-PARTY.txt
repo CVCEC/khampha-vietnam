@@ -1,0 +1,3 @@
+js/vendor/jszip.min.js – JSZip 3.10.1 (MIT hoặc GPLv3) – https://stuk.github.io/jszip/
+js/vendor/lame.min.js – lamejs 1.2.1 (LGPL-3.0) – https://github.com/zhuker/lamejs
+Hai thư viện này chỉ dùng cho công cụ tạo giọng studio.html.
