@@ -1,0 +1,1 @@
+Chép các video MP4 của từng trạm vào đây (ví dụ van-mieu.mp4), rồi khai báo trong js/video-manifest.js.
