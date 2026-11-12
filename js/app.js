@@ -584,7 +584,11 @@
       v.className = 'vfile'; v.controls = true; v.playsInline = true; v.muted = true; v.preload = 'auto'; v.src = src;
       if (vf.poster) v.poster = vf.poster;
       v.setAttribute('playsinline', '');
-      box.appendChild(v);
+      v.setAttribute('controlsList', 'nodownload noremoteplayback'); v.disablePictureInPicture = true;
+      const vw = document.createElement('div'); vw.className = 'vwrap';
+      vw.appendChild(v);
+      vw.insertAdjacentHTML('beforeend', '<div class="wm" aria-hidden="true"><span>© CVCEC · Trường Tiếng Việt Của Em · Chỉ xem, không sao chép</span></div>');
+      box.appendChild(vw);
       const wait = document.createElement('div'); wait.className = 'vwait hidden'; wait.textContent = '🗣️ Trâu Con đang đọc, phim chờ một chút nhé…';
       box.appendChild(wait);
       box.appendChild(KP.enBtn(s.en.story));
@@ -947,7 +951,7 @@
     const m = modal(`<h2>🏅 Bằng khen của bạn</h2><div class="field"><label for="certName">Tên ghi trên bằng khen</label><input id="certName" value="${esc(state.name)}" maxlength="40" placeholder="Ví dụ: Bảo An"></div>
       <div id="certPrev">${certHTML(state.name)}</div><div class="row" style="justify-content:center"><button class="btn gold" id="printBtn">🖨️ In / Lưu PDF</button></div>`, { wide: true, focus: false });
     $('#certName', m).oninput = e => { state.name = e.target.value.trim(); save(); $('#certPrev', m).innerHTML = certHTML(state.name); };
-    $('#printBtn', m).onclick = () => { $('#printArea').innerHTML = certHTML(state.name); window.print(); };
+    $('#printBtn', m).onclick = () => { $('#printArea').innerHTML = certHTML(state.name); document.body.classList.add('cert-print'); window.print(); setTimeout(() => document.body.classList.remove('cert-print'), 1500); };
   }
   function showFinale() {
     const m = modal(`<div class="welcome">${KP.img.mascot ? `<img src="${KP.img.mascot}" alt="Trâu Con">` : ''}<div class="emo" style="font-size:44px">🎉⭐🎉</div>
@@ -1072,7 +1076,8 @@
       <h3 style="margin:16px 0 4px">Dành cho bố mẹ / thầy cô</h3>
       <div class="row"><button class="btn ghost sm" id="unlockAll">🔓 Mở khoá tất cả trạm</button><button class="btn ghost sm" id="resetAll">↺ Bắt đầu lại hành trình</button></div>
       <p style="font-size:14px;color:var(--ink-2)">Tiến trình và sao vàng được lưu trên trình duyệt của máy này. Đổi máy thì bố mẹ dùng nút "Mở khoá" để bé học tiếp.</p>
-      <p><a href="https://truongtiengvietcuaem.cvcec.org" style="font-weight:800;color:var(--green-d)">← Về Trường Tiếng Việt Của Em</a></p>`);
+      <p><a href="https://truongtiengvietcuaem.cvcec.org" style="font-weight:800;color:var(--green-d)">← Về Trường Tiếng Việt Của Em</a> · <button type="button" class="linkbtn" id="termsBtn2" style="font-weight:700">Lưu ý về sử dụng tài liệu · Terms of use</button></p>`);
+    $('#termsBtn2', m).onclick = () => { m.close(); showTerms(); };
     $('#setName', m).oninput = e => { state.name = e.target.value.trim(); save(); };
     $('#sndBtn', m).onclick = e => { state.sound = !state.sound; save(); if (!state.sound) Voice.stop(); e.target.textContent = state.sound ? '🔊 Âm thanh: Bật' : '🔇 Âm thanh: Tắt'; e.target.classList.toggle('ghost', !state.sound); };
     $('#testVoice', m).onclick = () => {
@@ -1107,7 +1112,32 @@
   }
 
   /* ---------------- Khởi động ---------------- */
+  /* ---------- Lưu ý về sử dụng tài liệu ---------- */
+  const TERMS_MAIL = 'contact@cvcec.org';
+  function showTerms() {
+    modal(`<div class="terms"><h2>Lưu ý về sử dụng tài liệu · Terms of use</h2>
+      <p>Các phim, tranh minh hoạ, bài học và bản ghi âm trên trang Khám phá Việt Nam được đăng tải để các bạn nhỏ học và xem trực tuyến, và có thể được dùng cho nghiên cứu về tiếng Việt như một ngoại ngữ. Các nhà nghiên cứu ngôn ngữ muốn tìm hiểu thêm xin liên hệ <a class="mail" href="mailto:${TERMS_MAIL}">${TERMS_MAIL}</a>.</p>
+      <p>Trang hoàn toàn phi lợi nhuận. Tài liệu không được sử dụng vào mục đích thương mại, và không được sao chép, tải xuống hay chia sẻ lại dưới bất kỳ hình thức nào khi chưa có sự đồng ý bằng văn bản của CVCEC.</p>
+      <h3 lang="en">English</h3>
+      <p lang="en">The videos, illustrations, lessons and recordings on Khám phá Việt Nam are published for children to learn from and view online, and may be used for research on Vietnamese as a foreign language. Language researchers who would like more information may contact <a class="mail" href="mailto:${TERMS_MAIL}">${TERMS_MAIL}</a>.</p>
+      <p lang="en">This site is entirely non-profit. The materials may not be used for any commercial purpose, and may not be copied, downloaded or shared in any form without written permission from CVCEC.</p>
+      <p style="font-size:13px;color:var(--ink-2)">© CVCEC – Canada Vietnam Cultural &amp; Educational Council · Trường Tiếng Việt Của Em</p></div>`, { wide: true, focus: false });
+  }
+  KP.showTerms = showTerms;
+  /* Chặn chuột phải / nhấn giữ, kéo thả ảnh và phim, phím Ctrl/Cmd+S và Ctrl/Cmd+P */
+  function protectContent() {
+    const field = el => el && el.closest && el.closest('input, textarea, select, [contenteditable="true"]');
+    const msg = () => toast('🔒 Trang chỉ để xem trực tuyến · Online viewing only', 2500);
+    document.addEventListener('contextmenu', e => { if (!field(e.target)) e.preventDefault(); });
+    document.addEventListener('dragstart', e => { if (e.target && e.target.closest && e.target.closest('img, video, svg, canvas')) e.preventDefault(); });
+    document.addEventListener('keydown', e => {
+      const k = (e.key || '').toLowerCase();
+      if ((e.ctrlKey || e.metaKey) && (k === 's' || k === 'p')) { e.preventDefault(); msg(); }
+    }, true);
+  }
+
   async function init() {
+    protectContent();
     Voice.init();
     STOPS.forEach(st => [st.icon].concat(st.words.map(w => w.i)).forEach(ic => KP.iconImg(ic)));
     const [mascot, logo] = await Promise.all([resolveImg('mascot'), resolveImg('logo')]);
@@ -1125,6 +1155,7 @@
     $('#passBtn').onclick = showPassport;
     $('#badgeBtn').onclick = showBadges;
     $('#setBtn').onclick = showSettings;
+    if ($('#termsBtn')) $('#termsBtn').onclick = showTerms;
     let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => applyZoom(mapZoom, true), 150); });
     const hm = location.hash.match(/^#tram-([\w-]+)/);
     const hi = hm ? STOPS.findIndex(s => s.id === hm[1]) : -1;
