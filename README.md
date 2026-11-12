@@ -73,5 +73,13 @@ Toàn bộ chữ của 31 trạm nằm trong **`js/stops.js`**. Bạn có thể 
 - **Đường dẫn tới một trạm:** ví dụ `https://vietnam.cvcec.org/#tram-van-mieu`.
 - **Bản đồ:** vẽ từ dữ liệu Natural Earth theo quan điểm Việt Nam, có đủ Hoàng Sa (đặc khu thuộc TP. Đà Nẵng) và Trường Sa (đặc khu thuộc Khánh Hòa). Tên tỉnh, thành ghi theo địa giới mới từ 1/7/2025.
 
+## 8. Bảo vệ nội dung và Lưu ý về sử dụng tài liệu
+
+- **Chữ chìm trên phim:** mỗi phim có dòng chữ chìm "© CVCEC · Trường Tiếng Việt Của Em · Chỉ xem, không sao chép". Phim không có nút tải về, không bật được cửa sổ nổi (picture-in-picture), và chỉ ở độ phân giải 720p.
+- **Chặn lưu và sao chép:** trang chặn nhấn chuột phải, nhấn giữ để lưu ảnh, kéo thả ảnh và phim, phím Ctrl/Cmd+S và Ctrl/Cmd+P. In cả trang thì bản in chỉ có một dòng báo "Trang này chỉ để xem trực tuyến". Nút **In bằng khen** vẫn in được bình thường. Bưu thiếp bé tự làm vẫn tải về được để gửi ông bà.
+- **`robots.txt`:** yêu cầu Google không đưa ảnh lên kết quả tìm kiếm; không cho các công cụ tìm kiếm vào thư mục `video/`, `audio/` và trang `studio.html`; chặn các công cụ AI thu thập dữ liệu. Trong `index.html` có thẻ `noimageindex` báo Google không lấy ảnh.
+- **Lưu ý về sử dụng tài liệu · Terms of use:** nút ở chân trang và trong ⚙️ **Cài đặt**. Nội dung lời lưu ý nằm trong `js/app.js` (hàm `showTerms`). Địa chỉ liên hệ: contact@cvcec.org.
+- Các lớp chặn này giúp người xem khó lưu hay sao chép, nhưng không chặn được việc quay hoặc chụp màn hình.
+
 ---
 Copyrighted by CVCEC Trường Tiếng Việt Của Em 2026

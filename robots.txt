@@ -1,0 +1,55 @@
+# robots.txt – vietnam.cvcec.org
+# Khám phá Việt Nam · Trường Tiếng Việt Của Em (CVCEC)
+# Trang học chỉ để xem trực tuyến. Phim, tranh, bài học và giọng đọc không được sao chép hay dùng để huấn luyện AI.
+# This site is for online viewing only. Its content may not be copied or used to train AI.
+
+# Không đưa ảnh của trang lên Google Hình ảnh
+User-agent: Googlebot-Image
+Disallow: /
+
+# Các công cụ AI thu thập dữ liệu
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: GoogleOther
+User-agent: GoogleOther-Image
+User-agent: GoogleOther-Video
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: FacebookBot
+User-agent: Amazonbot
+User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+User-agent: Diffbot
+User-agent: ImagesiftBot
+User-agent: img2dataset
+User-agent: Omgilibot
+User-agent: Omgili
+User-agent: YouBot
+User-agent: Timpibot
+User-agent: AI2Bot
+User-agent: Ai2Bot-Dolma
+User-agent: MistralAI-User
+User-agent: DuckAssistBot
+User-agent: PanguBot
+User-agent: Kangaroo Bot
+User-agent: Webzio-Extended
+User-agent: iaskspider/2.0
+Disallow: /
+
+# Mọi công cụ tìm kiếm khác: không vào phim, giọng đọc và trang studio
+User-agent: *
+Disallow: /video/
+Disallow: /audio/
+Disallow: /studio.html
