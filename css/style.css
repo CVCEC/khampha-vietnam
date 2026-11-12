@@ -452,14 +452,27 @@ footer a { color: inherit; }
 }
 
 /* ---------- In bằng khen ---------- */
+/* In trang: chỉ in được bằng khen (nút In bằng khen). In cả trang thì chỉ ra một dòng báo. */
 @media print {
   @page { size: A4 landscape; margin: 10mm; }
   body { background: #fff; }
-  body > *:not(#printArea) { display: none !important; }
-  #printArea { display: block !important; }
+  body > * { display: none !important; }
+  body.cert-print > #printArea { display: block !important; }
+  body:not(.cert-print) > .print-block { display: block !important; }
   .cert { border-width: 10px; }
 }
 #printArea { display: none; }
+.print-block { display: none; text-align: center; font: 700 22px/1.6 "Nunito", sans-serif; color: #3A3B3C; padding-top: 30vh; }
+
+/* Bảo vệ nội dung: không kéo thả, không nhấn giữ để lưu ảnh/phim */
+img, video, svg, canvas { -webkit-user-drag: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.vwrap { position: relative; }
+.vwrap .wm { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; overflow: hidden; border-radius: 18px; }
+.vwrap .wm span { transform: rotate(-16deg); font-weight: 800; font-size: clamp(11px, 2.1vw, 20px); color: rgba(255, 255, 255, .34); text-shadow: 0 1px 2px rgba(0, 0, 0, .28); white-space: nowrap; letter-spacing: .02em; }
+.linkbtn { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+.terms h3 { margin: 14px 0 4px; }
+.terms p { margin: 0 0 10px; line-height: 1.55; }
+.terms .mail { font-weight: 800; user-select: all; -webkit-user-select: all; }
 
 /* =========================================================
    Phần mới: phim, ghi nhớ, thẻ từ, nút tiếng Anh, câu đố có gợi ý
