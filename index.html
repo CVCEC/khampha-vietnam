@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Khám phá Việt Nam | Trường Tiếng Việt Của Em</title>
   <meta name="description" content="Cùng Trâu Con đi dọc dải đất chữ S từ Cột cờ Lũng Cú tới Đất Mũi Cà Mau, ghé thăm quần đảo Hoàng Sa và Trường Sa, thu thập 31 ngôi sao vàng.">
-  <meta name="theme-color" content="#F4F0EA">
+  <meta name="theme-color" content="#FFF8EC">
   <meta name="robots" content="noimageindex">
   <meta name="googlebot" content="noimageindex">
   <meta property="og:title" content="Khám phá Việt Nam cùng Trâu Con">
@@ -15,14 +15,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&subset=vietnamese&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://mau.cvcec.org/v1/cvcec-chung.css">
+  <script src="https://mau.cvcec.org/v1/cvcec-chung.js" defer></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="https://truongtiengvietcuaem.cvcec.org" title="Về Trường Tiếng Việt Của Em">
-      <img data-asset="logo" class="hidden" alt="Trường Tiếng Việt Của Em">
+    <div class="brand">
       <span class="ttl"><b>Khám phá Việt Nam</b><span>Từ Lũng Cú đến Mũi Cà Mau</span></span>
-    </a>
+    </div>
     <span class="sp"></span>
     <span class="star-pill" title="Ngôi sao vàng đã thu thập">
       <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 61,38 95,38 68,58 78,92 50,72 22,92 32,58 5,38 39,38" fill="#F7C531" stroke="#C98400" stroke-width="5" stroke-linejoin="round"/></svg>
@@ -34,11 +35,13 @@
   </header>
 
   <main class="wrap">
-    <section class="hero">
-      <img class="mascot hidden" data-asset="mascot" alt="Trâu Con vẫy tay chào">
-      <div class="bubble"><h1 id="heroTitle">Chào các bạn! Mình là Trâu Con.</h1><p id="heroText">Cùng mình đi dọc chữ S từ Cột cờ Lũng Cú tới Đất Mũi Cà Mau nhé!</p></div>
-    </section>
-    <div class="chang-row" id="changRow"></div>
+    <div class="ttv-canh hero-canh">
+      <section class="hero">
+        <img class="mascot hidden" data-asset="mascot" alt="Trâu Con vẫy tay chào">
+        <div class="bubble"><h1 id="heroTitle">Chào các bạn! Mình là Trâu Con.</h1><p id="heroText">Cùng mình đi dọc chữ S từ Cột cờ Lũng Cú tới Đất Mũi Cà Mau nhé!</p></div>
+      </section>
+      <div class="chang-row" id="changRow"></div>
+    </div>
 
     <section class="map-card" aria-label="Bản đồ hành trình">
       <div class="map-tools">
@@ -54,12 +57,12 @@
 
   <div class="nextbar"><button class="btn" id="nextBtn">▶ Bắt đầu</button></div>
 
-  <footer>
-    <div>Copyrighted by CVCEC Trường Tiếng Việt Của Em 2026</div>
+  <div class="page-notes">
     <div>Bản đồ vẽ từ dữ liệu Natural Earth (theo quan điểm Việt Nam), có đầy đủ quần đảo Hoàng Sa và Trường Sa. Tỉnh, thành ghi theo địa giới mới từ 1/7/2025.</div>
-    <div>Giọng Trâu Con là giọng AI (Google AI Studio). Câu nào chưa có giọng AI sẽ đọc bằng giọng máy của thiết bị. · <a href="https://truongtiengvietcuaem.cvcec.org">Trường Tiếng Việt Của Em</a></div>
+    <div>Giọng Trâu Con là giọng AI (Google AI Studio). Câu nào chưa có giọng AI sẽ đọc bằng giọng máy của thiết bị. · <a href="https://vietclass.cvcec.org" target="_top">Trường Tiếng Việt Của Em</a></div>
     <div>Phim, tranh và bài học chỉ để xem trực tuyến, không sao chép · <button type="button" class="linkbtn" id="termsBtn">Lưu ý về sử dụng tài liệu · Terms of use</button></div>
-  </footer>
+  </div>
+  <footer data-ttv-chan></footer>
   <div class="print-block" aria-hidden="true"><b>Khám phá Việt Nam</b><br>Trang này chỉ để xem trực tuyến.<br>This site is for online viewing only.<br><small>© CVCEC · Trường Tiếng Việt Của Em · vietnam.cvcec.org</small></div>
 
   <div id="printArea"></div>

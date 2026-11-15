@@ -22,7 +22,7 @@
   .rock .itm{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);font-size:clamp(36px,7vw,50px)}
   .rock svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .45s cubic-bezier(.3,1.4,.5,1),opacity .45s}
   .rock.up svg{transform:translateY(-46%) scale(.86);opacity:.55;pointer-events:none}
-  .rock.found::after{content:'✓';position:absolute;top:4px;right:8px;background:#4E9A3E;color:#fff;border-radius:50%;width:28px;height:28px;font:900 17px/28px Nunito,sans-serif}
+  .rock.found::after{content:'✓';position:absolute;top:4px;right:8px;background:#3E7B32;color:#fff;border-radius:50%;width:28px;height:28px;font:900 17px/28px Nunito,sans-serif}
   .forks{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px}
   .cavebtn{border:0;background:none;padding:0;position:relative}
   .cavebtn svg{width:100%;height:auto;display:block}
@@ -34,7 +34,7 @@
   .torch{position:relative;width:100%;aspect-ratio:16/10;background:radial-gradient(ellipse at 50% 120%,#6E5D4E,#3A322B 60%,#231E1A);overflow:hidden;touch-action:none;cursor:crosshair}
   .torch .it{position:absolute;transform:translate(-50%,-50%);font-size:clamp(30px,6vw,46px);border:0;background:none;padding:6px;line-height:1}
   .torch .it.found{filter:drop-shadow(0 0 10px #FFE27A)}
-  .torch .it.found::after{content:'✓';position:absolute;top:-6px;right:-6px;background:#4E9A3E;color:#fff;border-radius:50%;width:22px;height:22px;font:900 14px/22px Nunito,sans-serif}
+  .torch .it.found::after{content:'✓';position:absolute;top:-6px;right:-6px;background:#3E7B32;color:#fff;border-radius:50%;width:22px;height:22px;font:900 14px/22px Nunito,sans-serif}
   .torch .dark{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at var(--x,50%) var(--y,50%),rgba(0,0,0,0) 0,rgba(0,0,0,0) 62px,rgba(12,9,7,.97) 104px)}
   .lanterns{display:flex;justify-content:space-around;align-items:flex-start;padding:0 6px 16px;background:linear-gradient(#3E4A7A,#7A6A8E 70%,#E8A97E);position:relative;min-height:230px}
   .lanterns::before{content:'';position:absolute;left:0;right:0;top:14px;height:3px;background:#2A2230;border-radius:3px}
@@ -48,15 +48,15 @@
   .caption{min-height:64px;margin-top:12px;background:#FFFDF8;border:2px solid #E4DCCD;border-radius:16px;padding:10px 14px;font-weight:800;font-size:18px}
   .compass{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:8px;align-items:center;justify-items:center;padding:14px;background:radial-gradient(circle,#FFF8E6,#F1E4C6)}
   .compass .dir{min-width:96px;min-height:58px;border-radius:16px;border:3px solid #E4DCCD;background:#FFFDF8;font:900 22px Nunito,sans-serif;box-shadow:0 4px 0 #E4DCCD}
-  .compass .dir.right{border-color:#4E9A3E;background:#EAF6E4}
-  .compass .dir.wrong{border-color:#D9534F;animation:shake .4s}
+  .compass .dir.right{border-color:#3E7B32;background:#EAF6E4}
+  .compass .dir.wrong{border-color:#C7302B;animation:shake .4s}
   .compass svg{width:100%;max-width:220px;height:auto}
   .needle{transition:transform .8s cubic-bezier(.3,1.5,.5,1);transform-origin:100px 100px}
   .boats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px;background:linear-gradient(#FCE6BF,#9ED3E6 35%,#7CC3DB)}
   .ghe{border:0;background:none;padding:0;position:relative}
   .ghe svg{width:100%;height:auto;display:block}
   .ghe .fruit{position:absolute;left:58%;top:2%;font-size:clamp(28px,6vw,40px)}
-  .ghe.right{filter:drop-shadow(0 0 10px #4E9A3E)}
+  .ghe.right{filter:drop-shadow(0 0 10px #3E7B32)}
   .ghe.wrong{animation:shake .4s}
   .spot{position:absolute;transform:translate(-50%,-50%);width:clamp(46px,9vw,64px);height:clamp(46px,9vw,64px);border-radius:50%;border:3px dashed #fff;background:rgba(255,255,255,.18);padding:0}
   .spot.planted{border:0;background:none}
@@ -66,7 +66,7 @@
   .wave-flag{animation:flagwave 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}
   @keyframes flagwave{0%,100%{transform:skewY(0)}50%{transform:skewY(-5deg) scaleX(.96)}}
   .meaning{display:grid;gap:12px}
-  .bigeq{text-align:center;font:900 clamp(26px,6vw,38px) Nunito,sans-serif;color:#9A6A1A;padding:16px;background:#FFF6D8;border:3px solid #F7C531;border-radius:20px;animation:popin .6s both}
+  .bigeq{text-align:center;font:900 clamp(26px,6vw,38px) Nunito,sans-serif;color:#936519;padding:16px;background:#FFF6D8;border:3px solid #F7C531;border-radius:20px;animation:popin .6s both}
   .stepcard{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:200px;padding:16px;background:linear-gradient(#FFFBEF,#F7EDD8);text-align:center}
   .stepcard .big{font-size:76px;line-height:1;animation:popin .5s both}
   .stepcard b{font-size:20px}
@@ -241,7 +241,7 @@
     if (stage >= 4) s += '<rect x="132" y="82" width="36" height="36" rx="4" fill="#E58C8A"/>';
     if (stage >= 5) s += '<rect x="80" y="30" width="140" height="140" rx="10" fill="#2F7A35"/><path d="M80 75 h140 M80 125 h140 M125 30 v140 M175 30 v140" stroke="#F4E7C5" stroke-width="5"/>';
     if (stage >= 6) s += '<text x="150" y="26" text-anchor="middle" font-size="26" class="emo">♨️♨️♨️</text><text x="250" y="190" font-size="34" class="emo">🔥</text>';
-    if (stage === 0) s += '<text x="150" y="110" text-anchor="middle" font-size="18" font-weight="800" fill="#A39C90">Chưa có gì cả…</text>';
+    if (stage === 0) s += '<text x="150" y="110" text-anchor="middle" font-size="18" font-weight="800" fill="#766E62">Chưa có gì cả…</text>';
     return s + '</svg>';
   }
   function towerVis(stage) {
@@ -250,7 +250,7 @@
     if (stage >= 2) s += '<rect x="108" y="100" width="84" height="78" fill="#B5552E"/><rect x="138" y="128" width="24" height="50" rx="10" fill="#5A2A14"/><rect x="116" y="112" width="12" height="40" fill="#9C4524"/><rect x="172" y="112" width="12" height="40" fill="#9C4524"/>';
     if (stage >= 3) s += '<path d="M104 102 L196 102 L184 80 L116 80Z" fill="#A04A28"/><path d="M118 80 L182 80 L172 60 L128 60Z" fill="#B5552E"/><path d="M130 60 L170 60 L162 44 L138 44Z" fill="#A04A28"/>';
     if (stage >= 4) s += '<path d="M140 44 L160 44 L150 18Z" fill="#C8673C"/><text x="200" y="40" font-size="26" class="emo">✨</text>';
-    if (stage === 0) s += '<text x="150" y="120" text-anchor="middle" font-size="18" font-weight="800" fill="#7E786C">Bãi đất trống…</text>';
+    if (stage === 0) s += '<text x="150" y="120" text-anchor="middle" font-size="18" font-weight="800" fill="#656057">Bãi đất trống…</text>';
     return s + '</svg>';
   }
   function orderGame(root, items, api, opts) {
@@ -566,12 +566,12 @@
       if (d <= r.r) {
         lock = true; api.sfx.ok();
         const [tx, ty] = KP.project(r.pos[0], r.pos[1]);
-        mk.innerHTML = `<circle cx="${tx}" cy="${ty}" r="26" fill="rgba(78,154,62,.25)" stroke="#4E9A3E" stroke-width="4"/><text x="${tx}" y="${ty}" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#2E6B22">✓</text>`;
+        mk.innerHTML = `<circle cx="${tx}" cy="${ty}" r="26" fill="rgba(62,123,50,.25)" stroke="#3E7B32" stroke-width="4"/><text x="${tx}" y="${ty}" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#2E6B22">✓</text>`;
         layer.appendChild(mk); const pr = pick(PH.praise); M.set(pr, true); api.say(pr);
         k++; if (k < cfg.rounds.length) wait(api, 1400, ask); else wait(api, 1400, meaning);
       } else {
         api.sfx.no(); tries++;
-        mk.innerHTML = `<text x="${p.x}" y="${p.y}" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#D9534F">✕</text>`;
+        mk.innerHTML = `<text x="${p.x}" y="${p.y}" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#C7302B">✕</text>`;
         layer.appendChild(mk); setTimeout(() => mk.remove(), 900);
         if (tries >= 2) {
           const [tx, ty] = KP.project(r.pos[0], r.pos[1]);

@@ -55,9 +55,14 @@ Cả **31 trạm** đã có video Trâu Con 3D trong thư mục `video/` (mỗi 
 - Danh sách câu của từng video nằm trong `js/video-manifest.js` (mục `cues`). Các câu này cũng có trong `studio.html` để tạo giọng Elio.
 - Thêm video cho trạm khác: chép file vào thư mục `video/`, rồi thêm một khối mới vào `js/video-manifest.js` theo mẫu của Văn Miếu. Mã trạm xem trong `js/stops.js` (dòng `id:`).
 
-## 5. Ảnh Trâu Con và logo chính thức
+## 5. Bộ mẫu chung "Làng Trâu Con", ảnh Trâu Con và logo
 
-Nên chép 2 ảnh chính thức vào thư mục `assets/`: `trau-con.png` (Trâu Con vẫy tay, nền trong suốt) và `logo-wordmark.png`. Nếu chưa có, trang tự lấy ảnh từ truongtiengvietcuaem.cvcec.org.
+- `index.html` nạp bộ mẫu chung của trường: `https://mau.cvcec.org/v1/cvcec-chung.css` và `cvcec-chung.js`. Bộ mẫu thêm thanh các góc học (chỉ khi mở trang riêng, không hiện khi nằm trong cổng vietclass.cvcec.org), dòng bản quyền và liên hệ ở chân trang, màu và phông chung (biến `--ttv-*`). Trang dùng màu của góc học `vietnam`.
+- Trong `css/style.css`, các biến cũ (`--ink`, `--bg`, `--green`…) trỏ sang biến `--ttv-*`. Màu bản đồ, màu chặng, màu đúng/sai và nút EN là màu riêng của trang.
+- Ảnh Trâu Con (`trau-wave.png`) và logo (`logo.png`) lấy từ `https://mau.cvcec.org/assets/`. Không chép, không vẽ lại.
+- Trang chạy được trong khung iframe của cổng **https://vietclass.cvcec.org/#vietnam**. Link về trường mở `https://vietclass.cvcec.org` với `target="_top"`.
+- `studio.html` là công cụ nội bộ, không gắn bộ mẫu.
+- **Giọng máy (ngoại lệ tạm thời, xem `CLAUDE.md`):** khi chưa có tệp giọng Elio cho một câu, trang vẫn đọc bằng giọng máy của thiết bị. Tạo dần giọng Elio bằng `studio.html` (mục 3). Chỉ gỡ giọng máy khi đã đủ tệp.
 
 ## 6. Sửa hoặc thêm nội dung
 

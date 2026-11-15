@@ -15,11 +15,10 @@
   const pick = a => a[rand(a.length)];
   KP.$ = $; KP.esc = esc; KP.rand = rand; KP.shuffle = shuffle;
 
-  /* Ảnh Trâu Con & logo chính thức: ưu tiên file trong thư mục assets/,
-     nếu chưa có thì lấy từ trang Trường Tiếng Việt Của Em. */
+  /* Ảnh Trâu Con & logo chính thức: lấy từ bộ mẫu chung (mau.cvcec.org/assets). */
   const ASSET = {
-    mascot: ['assets/trau-con.png', 'https://truongtiengvietcuaem.cvcec.org/assets/wave-BxRGaky7.png'],
-    logo: ['assets/logo-wordmark.png', 'https://truongtiengvietcuaem.cvcec.org/assets/logo-wordmark-B0AAq1bv.png']
+    mascot: ['https://mau.cvcec.org/assets/trau-wave.png'],
+    logo: ['https://mau.cvcec.org/assets/logo.png']
   };
   KP.img = { mascot: '', logo: '', mascotLocal: false };
   function resolveImg(key) {
@@ -514,7 +513,7 @@
     SV = { i, s, cur: 0, max: already ? STEPS.length - 1 : 0, ok: {}, already, earned: false };
     Voice.preload(['chung', s.id]);
     const ch = CHANG[s.chang - 1];
-    const ov = document.createElement('div'); ov.className = 'overlay'; ov.id = 'stopView';
+    const ov = document.createElement('div'); ov.className = 'overlay'; ov.id = 'stopView'; ov.setAttribute('data-ttv-nen', 'don-gian');
     ov.innerHTML = `<div class="ov-top"><button class="icon-btn close" id="svClose" aria-label="Về bản đồ"><span class="emo">🗺️</span><span class="lbl">Bản đồ</span></button>
       <div class="ov-title"><b>${i + 1}. ${esc(s.name)}</b><span><i style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${ch.color}"></i> Chặng ${ch.id}: ${esc(ch.name)} · ${esc(s.place)}</span></div>
       <span class="star-pill">${KP.goldStarSVG(22)}<span>${starCount()}</span></span></div>
@@ -971,11 +970,14 @@
     if (line) ctx.fillText(line, x, y);
     return y + lh;
   }
+  /* Màu chặng khi dùng làm CHỮ trên bưu thiếp (nền kem): đậm hơn để đạt 4,5:1.
+     Màu chặng trên bản đồ giữ nguyên. */
+  const CHANG_CHU = { '#7FB069': '#527A40', '#E8956B': '#B9511D', '#B48EAD': '#926189', '#5FA8C2': '#377991', '#C68B59': '#9B6435', '#DDAA55': '#936519' };
   function drawPostcard(s, plain) {
     const c = document.createElement('canvas'); c.width = 1200; c.height = 800;
     const x = c.getContext('2d'), ch = CHANG[s.chang - 1];
     const F = '"Nunito", "Segoe UI", sans-serif', E = '"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif';
-    x.fillStyle = '#F4F0EA'; x.fillRect(0, 0, 1200, 800);
+    x.fillStyle = '#FFF8EC'; x.fillRect(0, 0, 1200, 800);
     x.fillStyle = ch.color; x.fillRect(0, 0, 1200, 120);
     x.fillStyle = '#fff'; x.font = `900 52px ${F}`; x.textBaseline = 'middle'; x.fillText('Bưu thiếp từ ' + s.name, 40, 62);
     x.fillStyle = '#FFFDF8'; x.beginPath(); x.arc(250, 400, 190, 0, Math.PI * 2); x.fill();
@@ -996,16 +998,16 @@
     x.setLineDash([]); x.fillStyle = '#F7C531'; x.beginPath();
     for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, r = i % 2 ? 22 : 52; x.lineTo(r * Math.cos(a), r * Math.sin(a) - 4); }
     x.closePath(); x.fill(); x.strokeStyle = '#C98400'; x.lineWidth = 3; x.stroke();
-    x.fillStyle = '#3A3B3C'; x.font = `800 18px ${F}`; x.fillText('Việt Nam', 0, 56); x.restore();
-    x.textAlign = 'left'; x.textBaseline = 'alphabetic'; x.fillStyle = '#3A3B3C';
+    x.fillStyle = '#003060'; x.font = `800 18px ${F}`; x.fillText('Việt Nam', 0, 56); x.restore();
+    x.textAlign = 'left'; x.textBaseline = 'alphabetic'; x.fillStyle = '#003060';
     x.font = `900 54px ${F}`; x.fillText('Con chào ông bà!', 480, 250);
     x.font = `700 34px ${F}`;
     let y = wrapText(x, `Hôm nay con cùng Trâu Con đến ${s.name} (${s.place}).`, 480, 320, 640, 46);
     y = wrapText(x, `Con đã học được: ${s.words.map(w => w.w).join(', ')}.`, 480, y + 10, 640, 46);
-    x.font = `800 34px ${F}`; x.fillStyle = ch.color === '#DDAA55' ? '#9A6A1A' : ch.color;
+    x.font = `800 34px ${F}`; x.fillStyle = CHANG_CHU[ch.color] || '#003060';
     x.fillText(`Con nhớ ông bà nhiều!${state.name ? ' – ' + state.name : ''}`, 480, y + 30);
     if (KP.img.mascotLocal && KP._mascotImg) { try { x.drawImage(KP._mascotImg, 1000, 560, 168, 194); } catch (e) { } }
-    x.fillStyle = '#9A9384'; x.font = `700 22px ${F}`; x.fillText('Trường Tiếng Việt Của Em · Khám phá Việt Nam · vietnam.cvcec.org', 40, 770);
+    x.fillStyle = '#5F6670'; x.font = `700 22px ${F}`; x.fillText('Trường Tiếng Việt Của Em · Khám phá Việt Nam · vietnam.cvcec.org', 40, 770);
     if (usedImg) { try { x.getImageData(0, 0, 1, 1); } catch (e) { return drawPostcard(s, true); } }
     return c;
   }
@@ -1076,7 +1078,7 @@
       <h3 style="margin:16px 0 4px">Dành cho bố mẹ / thầy cô</h3>
       <div class="row"><button class="btn ghost sm" id="unlockAll">🔓 Mở khoá tất cả trạm</button><button class="btn ghost sm" id="resetAll">↺ Bắt đầu lại hành trình</button></div>
       <p style="font-size:14px;color:var(--ink-2)">Tiến trình và sao vàng được lưu trên trình duyệt của máy này. Đổi máy thì bố mẹ dùng nút "Mở khoá" để bé học tiếp.</p>
-      <p><a href="https://truongtiengvietcuaem.cvcec.org" style="font-weight:800;color:var(--green-d)">← Về Trường Tiếng Việt Của Em</a> · <button type="button" class="linkbtn" id="termsBtn2" style="font-weight:700">Lưu ý về sử dụng tài liệu · Terms of use</button></p>`);
+      <p><a href="https://vietclass.cvcec.org" target="_top" style="font-weight:800;color:var(--green-d)">← Về Trường Tiếng Việt Của Em</a> · <button type="button" class="linkbtn" id="termsBtn2" style="font-weight:700">Lưu ý về sử dụng tài liệu · Terms of use</button></p>`);
     $('#termsBtn2', m).onclick = () => { m.close(); showTerms(); };
     $('#setName', m).oninput = e => { state.name = e.target.value.trim(); save(); };
     $('#sndBtn', m).onclick = e => { state.sound = !state.sound; save(); if (!state.sound) Voice.stop(); e.target.textContent = state.sound ? '🔊 Âm thanh: Bật' : '🔇 Âm thanh: Tắt'; e.target.classList.toggle('ghost', !state.sound); };
