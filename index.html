@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&subset=vietnamese&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://mau.cvcec.org/v1/cvcec-chung.css">
   <script src="https://mau.cvcec.org/v1/cvcec-chung.js" defer></script>
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
   <header class="topbar">
@@ -35,39 +35,7 @@
   </header>
 
   <main class="wrap">
-    <div class="ttv-canh hero-canh">
-      <section class="hero">
-        <img class="mascot hidden" data-asset="mascot" alt="Trâu Con vẫy tay chào">
-        <div class="bubble"><h1 id="heroTitle">Chào các bạn! Mình là Trâu Con.</h1><p id="heroText">Cùng mình đi dọc chữ S từ Cột cờ Lũng Cú tới Đất Mũi Cà Mau nhé!</p></div>
-      </section>
-      <div class="chang-row" id="changRow"></div>
-    </div>
-
-    <section class="map-card" aria-label="Bản đồ hành trình">
-      <div class="map-tools">
-        <button id="zIn" aria-label="Phóng to">＋</button>
-        <button id="zOut" aria-label="Thu nhỏ">－</button>
-        <button id="zFit" aria-label="Xem toàn bản đồ"><span class="emo" style="font-size:19px">🗺️</span></button>
-        <button id="zMe" aria-label="Tìm Trâu Con"><span class="emo" style="font-size:19px">📍</span></button>
-      </div>
-      <div class="map-scroll" id="mapScroll"></div>
-      <div class="map-legend"><span>⭐ Đã có sao</span><span>🔒 Chưa mở</span><span>⛴️ Đường biển</span></div>
-    </section>
-
-    <!-- Khách đang học thử (trong cổng): dải mời đăng nhập, script hiện khi cổng báo chế độ "thu" -->
-    <section class="kp-moi" id="kpMoi" aria-labelledby="kpMoiH" hidden>
-      <img class="kp-moi-trau" data-asset="mascot" alt="">
-      <div>
-        <p class="kp-moi-bong">Các bạn giỏi quá! Trạm tiếp theo là Thác Bản Giốc đấy. Các bạn nhờ bố mẹ đăng nhập giúp nhé, mình sẽ cất sao cho các bạn.</p>
-        <h2 id="kpMoiH">🗺️ Cùng Trâu Con đi trọn 31 trạm?</h2>
-        <p><b>Khám phá Việt Nam</b> là một phần của Trường Tiếng Việt Của Em – dự án phi lợi nhuận của CVCEC. Đăng nhập một lần để mở 30 trạm còn lại, lưu sao và hộ chiếu của bé.</p>
-        <div class="kp-nut-hang">
-          <a class="btn sm" data-dang-nhap href="https://vietclass.cvcec.org/dang-nhap/?ve=%2F%23vietnam" target="_top">Đăng nhập để đi tiếp</a>
-          <a class="btn ghost sm" data-dang-ky href="https://vietclass.cvcec.org/dang-nhap/?che-do=ky&amp;ve=%2F%23vietnam" target="_top">Tạo tài khoản</a>
-        </div>
-      </div>
-    </section>
-
+    <!-- Tổng quan & Mục tiêu, Hướng dẫn: hiện đầu tiên khi mở Khám phá Việt Nam -->
     <div class="kp-gt">
       <details class="kp-khoi" id="tongQuan" open>
         <summary><span class="kp-khoi-ten">🎯 Tổng quan &amp; Mục tiêu</span><span class="kp-them" aria-hidden="true"></span></summary>
@@ -109,6 +77,39 @@
         </div>
       </details>
     </div>
+    <div class="ttv-canh hero-canh">
+      <section class="hero">
+        <img class="mascot hidden" data-asset="mascot" alt="Trâu Con vẫy tay chào">
+        <div class="bubble"><h1 id="heroTitle">Chào các bạn! Mình là Trâu Con.</h1><p id="heroText">Cùng mình đi dọc chữ S từ Cột cờ Lũng Cú tới Đất Mũi Cà Mau nhé!</p></div>
+      </section>
+      <div class="chang-row" id="changRow"></div>
+    </div>
+
+    <section class="map-card" aria-label="Bản đồ hành trình">
+      <div class="map-tools">
+        <button id="zIn" aria-label="Phóng to">＋</button>
+        <button id="zOut" aria-label="Thu nhỏ">－</button>
+        <button id="zFit" aria-label="Xem toàn bản đồ"><span class="emo" style="font-size:19px">🗺️</span></button>
+        <button id="zMe" aria-label="Tìm Trâu Con"><span class="emo" style="font-size:19px">📍</span></button>
+      </div>
+      <div class="map-scroll" id="mapScroll"></div>
+      <div class="map-legend"><span>⭐ Đã có sao</span><span>🔒 Chưa mở</span><span>⛴️ Đường biển</span></div>
+    </section>
+
+    <!-- Khách đang học thử (trong cổng): dải mời đăng nhập, script hiện khi cổng báo chế độ "thu" -->
+    <section class="kp-moi" id="kpMoi" aria-labelledby="kpMoiH" hidden>
+      <img class="kp-moi-trau" data-asset="mascot" alt="">
+      <div>
+        <p class="kp-moi-bong">Các bạn giỏi quá! Trạm tiếp theo là Thác Bản Giốc đấy. Các bạn nhờ bố mẹ đăng nhập giúp nhé, mình sẽ cất sao cho các bạn.</p>
+        <h2 id="kpMoiH">🗺️ Cùng Trâu Con đi trọn 31 trạm?</h2>
+        <p><b>Khám phá Việt Nam</b> là một phần của Trường Tiếng Việt Của Em – dự án phi lợi nhuận của CVCEC. Đăng nhập một lần để mở 30 trạm còn lại, lưu sao và hộ chiếu của bé.</p>
+        <div class="kp-nut-hang">
+          <a class="btn sm" data-dang-nhap href="https://vietclass.cvcec.org/dang-nhap/?ve=%2F%23vietnam" target="_top">Đăng nhập để đi tiếp</a>
+          <a class="btn ghost sm" data-dang-ky href="https://vietclass.cvcec.org/dang-nhap/?che-do=ky&amp;ve=%2F%23vietnam" target="_top">Tạo tài khoản</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div class="nextbar"><button class="btn" id="nextBtn">▶ Bắt đầu</button></div>
@@ -131,6 +132,6 @@
   <script src="js/icons.js"></script>
   <script src="js/scenes.js"></script>
   <script src="js/games.js"></script>
-  <script src="js/app.js?v=2"></script>
+  <script src="js/app.js?v=3"></script>
 </body>
 </html>

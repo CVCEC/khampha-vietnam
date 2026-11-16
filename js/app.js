@@ -460,13 +460,14 @@
       window.scrollTo(0, window.scrollY + r1.top + cyr * r1.height - window.innerHeight / 2);
     }
   }
-  function centerOn(x, y, smooth) {
+  function centerOn(x, y, smooth, chiNgang) {
     const el = $('#mapScroll'), svg = $('#mapSvg'); if (!svg) return;
     const r = svg.getBoundingClientRect(), k = r.width / M.W;
     el.scrollTo({ left: x * k - el.clientWidth / 2, behavior: smooth ? 'smooth' : 'auto' });
+    if (chiNgang) return; // lúc mở trang: chỉ cuộn bản đồ sang ngang, giữ trang ở đầu (Tổng quan, Hướng dẫn)
     window.scrollTo({ top: window.scrollY + r.top + y * k - window.innerHeight * .45, behavior: smooth ? 'smooth' : 'auto' });
   }
-  KP.centerOnCurrent = smooth => { const p = mkPos(STOPS[currentIdx()]); centerOn(p[0], p[1], smooth); };
+  KP.centerOnCurrent = (smooth, chiNgang) => { const p = mkPos(STOPS[currentIdx()]); centerOn(p[0], p[1], smooth, chiNgang); };
 
   function renderHeader() {
     const n = starCount();
@@ -1185,8 +1186,6 @@
     $$('img[data-asset]').forEach(im => { const v = KP.img[im.dataset.asset]; if (v) { im.src = v; im.classList.remove('hidden'); } else im.remove(); });
     renderMap();
     capNhatCheDo();
-    // Điện thoại: thu gọn hai khối Tổng quan, Hướng dẫn để bản đồ và nút Bắt đầu nổi bật
-    if (window.matchMedia && matchMedia('(max-width: 640px)').matches) $$('details.kp-khoi').forEach(d => { d.open = false; });
     $('#mapScroll').addEventListener('click', onMapClick);
     $('#mapScroll').addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.mk')) { e.preventDefault(); onMapClick(e); } });
     $('#zIn').onclick = () => applyZoom(mapZoom * 1.35);
@@ -1201,8 +1200,9 @@
     const hm = location.hash.match(/^#tram-([\w-]+)/);
     const hi = hm ? STOPS.findIndex(s => s.id === hm[1]) : -1;
     if (hi >= 0) { if (isUnlocked(hi)) openStop(hi); else lockedInfo(hi); }
-    else if (!state.seen) showWelcome();
-    else setTimeout(() => KP.centerOnCurrent(false), 50);
+    // Bỏ hộp chào hỏi tên (16-11-2026): Tổng quan và Hướng dẫn đã ở đầu trang, tên không cần thu thập ở đây
+    else if (!state.seen) { state.seen = true; save(); setTimeout(() => KP.centerOnCurrent(false, true), 50); }
+    else setTimeout(() => KP.centerOnCurrent(false, true), 50);
   }
   KP.openStop = openStop;
   document.addEventListener('DOMContentLoaded', init);
