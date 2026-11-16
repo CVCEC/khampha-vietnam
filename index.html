@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&subset=vietnamese&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://mau.cvcec.org/v1/cvcec-chung.css">
   <script src="https://mau.cvcec.org/v1/cvcec-chung.js" defer></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
   <header class="topbar">
@@ -53,6 +53,62 @@
       <div class="map-scroll" id="mapScroll"></div>
       <div class="map-legend"><span>⭐ Đã có sao</span><span>🔒 Chưa mở</span><span>⛴️ Đường biển</span></div>
     </section>
+
+    <!-- Khách đang học thử (trong cổng): dải mời đăng nhập, script hiện khi cổng báo chế độ "thu" -->
+    <section class="kp-moi" id="kpMoi" aria-labelledby="kpMoiH" hidden>
+      <img class="kp-moi-trau" data-asset="mascot" alt="">
+      <div>
+        <p class="kp-moi-bong">Các bạn giỏi quá! Trạm tiếp theo là Thác Bản Giốc đấy. Các bạn nhờ bố mẹ đăng nhập giúp nhé, mình sẽ cất sao cho các bạn.</p>
+        <h2 id="kpMoiH">🗺️ Cùng Trâu Con đi trọn 31 trạm?</h2>
+        <p><b>Khám phá Việt Nam</b> là một phần của Trường Tiếng Việt Của Em – dự án phi lợi nhuận của CVCEC. Đăng nhập một lần để mở 30 trạm còn lại, lưu sao và hộ chiếu của bé.</p>
+        <div class="kp-nut-hang">
+          <a class="btn sm" data-dang-nhap href="https://vietclass.cvcec.org/dang-nhap/?ve=%2F%23vietnam" target="_top">Đăng nhập để đi tiếp</a>
+          <a class="btn ghost sm" data-dang-ky href="https://vietclass.cvcec.org/dang-nhap/?che-do=ky&amp;ve=%2F%23vietnam" target="_top">Tạo tài khoản</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="kp-gt">
+      <details class="kp-khoi" id="tongQuan" open>
+        <summary><span class="kp-khoi-ten">🎯 Tổng quan &amp; Mục tiêu</span><span class="kp-them" aria-hidden="true"></span></summary>
+        <div class="kp-khoi-ruot">
+          <h3>Hành trình có gì?</h3>
+          <p>31 trạm dọc dải đất chữ S, chia thành 6 chặng:</p>
+          <ul class="kp-chang">
+            <li><span aria-hidden="true">⛰️</span><span><b>Núi rừng phía Bắc</b> (7 trạm): Lũng Cú, Bản Giốc, Ba Bể, Sa Pa, A Pa Chải, Mộc Châu, Đền Hùng</span></li>
+            <li><span aria-hidden="true">🌾</span><span><b>Đồng bằng Bắc Bộ</b> (4): Hồ Gươm, Văn Miếu, Hạ Long, Tràng An</span></li>
+            <li><span aria-hidden="true">🧱</span><span><b>Bắc Trung Bộ</b> (3): Thành nhà Hồ, Phong Nha – Kẻ Bàng, Cố đô Huế</span></li>
+            <li><span aria-hidden="true">🌊</span><span><b>Duyên hải miền Trung &amp; biển đảo</b> (8): Đà Nẵng, Hội An, Mỹ Sơn, Lý Sơn, <b>Hoàng Sa</b>, Ghềnh Đá Đĩa, Mũi Đôi, <b>Trường Sa</b></span></li>
+            <li><span aria-hidden="true">☕</span><span><b>Tây Nguyên &amp; Nam Trung Bộ</b> (3): Buôn Ma Thuột, Đà Lạt, Mũi Né</span></li>
+            <li><span aria-hidden="true">🛶</span><span><b>Nam Bộ &amp; Đất Mũi</b> (6): TP. Hồ Chí Minh, Côn Đảo, Bến Tre, Cái Răng, Phú Quốc, Đất Mũi Cà Mau</span></li>
+          </ul>
+          <h3>Mỗi trạm có 7 bước</h3>
+          <p class="kp-buoc">🎬 Phim → 🔑 Ghi nhớ → 🃏 Thẻ từ → 🎮 Trò chơi → 🍜 Ăn gì, có gì → ❓ Đố vui → ⭐ Nhận sao</p>
+          <h3>Học xong hành trình, các bạn có thể</h3>
+          <ul>
+            <li><b>Biết hình dáng đất nước</b>: tìm 31 địa danh trên bản đồ chữ S, 6 vùng miền, 4 điểm cực Bắc – Tây – Đông – Nam, và biết quần đảo <b>Hoàng Sa, Trường Sa</b> là của Việt Nam.</li>
+            <li><b>Có thêm 124 từ mới</b> (4 từ mỗi trạm), mỗi từ kèm câu ví dụ và nghĩa tiếng Anh.</li>
+            <li><b>Kể ngắn về một địa danh</b> bằng tiếng Việt: ở đâu, có gì đặc biệt, nhờ phần Ghi nhớ và Đố vui.</li>
+            <li><b>Biết món ăn, phong tục</b> của từng vùng: mèn mén, cà phê Buôn Ma Thuột, chợ nổi…</li>
+            <li><b>Tự hào và gắn bó</b> với quê hương, qua hộ chiếu, huy hiệu và bằng khen cuối hành trình.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="kp-khoi" id="huongDan" open>
+        <summary><span class="kp-khoi-ten">🧭 Hướng dẫn cho cha mẹ &amp; thầy cô</span><span class="kp-them" aria-hidden="true"></span></summary>
+        <div class="kp-khoi-ruot">
+          <ul>
+            <li><b>Mỗi lần 1 trạm</b>, khoảng 10–15 phút, 2–3 lần một tuần. Đi hết 31 trạm trong khoảng 3 tháng.</li>
+            <li><b>Xem phim cùng bé</b>, cho bé đọc to từ mới theo Trâu Con.</li>
+            <li><b>Đố vui cần đúng 2/3 câu.</b> Nếu bé chưa đạt, bấm 💡 Gợi ý rồi làm lại.</li>
+            <li>Nút <b>EN · Explain in English</b> giải thích ngắn bằng tiếng Anh cho bé còn yếu tiếng Việt.</li>
+            <li><b>Hộ chiếu và huy hiệu</b>: mỗi chặng xong được một huy hiệu, cùng 3 huy hiệu đặc biệt (4 điểm cực, Biển đảo quê hương, Nguồn cội giáo dục).</li>
+            <li><b>Với thầy cô:</b> có thể dạy theo chặng, mỗi tuần một chặng ngắn, rồi cho cả lớp tìm các trạm trên bản đồ.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
   </main>
 
   <div class="nextbar"><button class="btn" id="nextBtn">▶ Bắt đầu</button></div>
@@ -75,6 +131,6 @@
   <script src="js/icons.js"></script>
   <script src="js/scenes.js"></script>
   <script src="js/games.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/app.js?v=2"></script>
 </body>
 </html>

@@ -485,9 +485,44 @@
     else { nb.innerHTML = `<span class="emo">▶</span> ${n ? 'Đi tiếp' : 'Bắt đầu'}: ${cur + 1}. ${esc(cs.name)}`; nb.onclick = () => openStop(cur); nb.className = 'btn'; }
   }
 
+  /* ---------- Học thử (khách chưa đăng nhập, mở trong cổng): chỉ Trạm 1 ---------- */
+  const TRAM_THU = 'lung-cu';
+  const cheDoHoc = () => (window.TTV && TTV.cheDoHoc) ? TTV.cheDoHoc() : null;
+  const laThu = () => cheDoHoc() === 'thu';
+  const duongDangNhap = ky => (window.TTV && TTV.duongDangNhap) ? TTV.duongDangNhap(ky) : 'https://vietclass.cvcec.org/dang-nhap/?' + (ky ? 'che-do=ky&' : '') + 've=%2F%23vietnam';
+  function moiDangNhap(i) {
+    const s = STOPS[i];
+    const m = modal(`<div class="welcome">${KP.img.mascot ? `<img src="${KP.img.mascot}" alt="" style="width:84px">` : ''}
+      <h2 style="margin:6px 0">${esc(s.name)} đang chờ các bạn!</h2>
+      <p>Trạm 1 Cột cờ Lũng Cú mở cho các bạn học thử. Muốn đi tiếp, các bạn nhờ bố mẹ đăng nhập giúp nhé, mình sẽ mở 30 trạm còn lại và cất sao cho các bạn.</p>
+      <div class="row" style="justify-content:center"><a class="btn" href="${esc(duongDangNhap(false))}" target="_top">Đăng nhập để đi tiếp</a><a class="btn ghost sm" href="${esc(duongDangNhap(true))}" target="_top">Tạo tài khoản</a></div>
+      <p style="margin-top:10px"><button type="button" class="btn ghost sm" data-close>Ở lại xem bản đồ</button></p></div>`);
+    return m;
+  }
+  function capNhatCheDo() {
+    const thu = laThu(), dai = $('#kpMoi');
+    if (dai) {
+      dai.hidden = !thu;
+      const a = dai.querySelector('[data-dang-nhap]'), b = dai.querySelector('[data-dang-ky]');
+      if (a) a.href = duongDangNhap(false); if (b) b.href = duongDangNhap(true);
+    }
+    // Đang mở một trạm khác Trạm 1 (ví dụ vào thẳng bằng #tram-…) thì đóng lại và mời đăng nhập
+    if (thu && SV && SV.s.id !== TRAM_THU) { const i = SV.i; closeStop(); moiDangNhap(i); return; }
+    // Vào thẳng địa chỉ một trạm khác (#tram-…) khi đang học thử: thay hộp "chưa mở" bằng hộp mời đăng nhập
+    const hm = thu && location.hash.match(/^#tram-([\w-]+)/);
+    const hi = hm ? STOPS.findIndex(x => x.id === hm[1]) : -1;
+    if (hi >= 0 && STOPS[hi].id !== TRAM_THU && !SV) {
+      $$('.modal-back').forEach(x => x.close ? x.close() : x.remove());
+      try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { }
+      moiDangNhap(hi);
+    }
+  }
+  document.addEventListener('ttv-che-do', capNhatCheDo);
+
   function onMapClick(e) {
     const g = e.target.closest('.mk'); if (!g) return;
     const i = +g.dataset.i;
+    if (laThu() && STOPS[i].id !== TRAM_THU) { moiDangNhap(i); return; }
     if (isUnlocked(i)) openStop(i); else lockedInfo(i);
   }
   function lockedInfo(i) {
@@ -508,6 +543,7 @@
 
   function openStop(i) {
     const s = STOPS[i];
+    if (laThu() && s.id !== TRAM_THU) { moiDangNhap(i); return; }
     Voice.stop();
     const already = !!state.stars[s.id];
     SV = { i, s, cur: 0, max: already ? STEPS.length - 1 : 0, ok: {}, already, earned: false };
@@ -1148,6 +1184,9 @@
     if (KP.img.mascotLocal) { KP._mascotImg = new Image(); KP._mascotImg.src = mascot; }
     $$('img[data-asset]').forEach(im => { const v = KP.img[im.dataset.asset]; if (v) { im.src = v; im.classList.remove('hidden'); } else im.remove(); });
     renderMap();
+    capNhatCheDo();
+    // Điện thoại: thu gọn hai khối Tổng quan, Hướng dẫn để bản đồ và nút Bắt đầu nổi bật
+    if (window.matchMedia && matchMedia('(max-width: 640px)').matches) $$('details.kp-khoi').forEach(d => { d.open = false; });
     $('#mapScroll').addEventListener('click', onMapClick);
     $('#mapScroll').addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.mk')) { e.preventDefault(); onMapClick(e); } });
     $('#zIn').onclick = () => applyZoom(mapZoom * 1.35);
