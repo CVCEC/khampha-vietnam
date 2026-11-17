@@ -87,7 +87,7 @@
      (js/audio-manifest.js) thì phát file; mảnh nào chưa có thì đọc bằng giọng
      máy của thiết bị QUA BỘ MẪU (TTV.phat({ chu }), quy tắc 7 từ 17-11-2026),
      chia thành từng câu ngắn để không bị ngắt giữa chừng. Lời đọc không gọi
-     speechSynthesis trực tiếp (chỉ còn bước mở khoá im lặng trong init). */
+     speechSynthesis trực tiếp; bộ mẫu tự mở khoá giọng máy ở lần chạm đầu. */
   const ttvPhat = () => { const T = window.TTV; return T ? (T.phat || (T.giong && T.giong.phat) || null) : null; };
   const ttvDung = () => { const T = window.TTV; try { if (T && T.giong && T.giong.dung) T.giong.dung(); } catch (e) { } };
   const Voice = KP.Voice = {
@@ -96,20 +96,7 @@
     init() {
       /* Máy có giọng tiếng Việt không (chỉ để báo trong Cài đặt); bộ mẫu tự chọn giọng */
       try { const T = window.TTV; if (T && T.giong && T.giong.coGiongViet) T.giong.coGiongViet().then(c => { this.hasVi = !!c; }); } catch (e) { }
-      /* Lần chạm đầu tiên: "mở khoá" bộ đọc của máy bằng một câu RỖNG, âm lượng 0 (không đọc gì).
-         iPad, iPhone chỉ cho đọc khi câu đầu tiên đến từ một lần chạm; lời đọc theo phụ đề phim
-         chạy sau đó không phải do chạm. Bộ mẫu chưa có hàm mở khoá nên giữ chỗ này; mọi lời đọc
-         thật đều đi qua TTV.phat. */
-      if (!('speechSynthesis' in window)) return;
-      const evs = ['pointerdown', 'touchend', 'keydown'];
-      const unlock = () => {
-        evs.forEach(ev => document.removeEventListener(ev, unlock, true));
-        try {
-          if (speechSynthesis.speaking || speechSynthesis.pending) return;
-          const u = new SpeechSynthesisUtterance(' '); u.volume = 0; this._moKhoa = u; speechSynthesis.speak(u);
-        } catch (e) { }
-      };
-      evs.forEach(ev => document.addEventListener(ev, unlock, { capture: true, passive: true }));
+      /* Mở khoá giọng máy trên iPad ở lần chạm đầu: bộ mẫu chung tự làm (TTV.giong.moKhoa). */
     },
     /* Máy không đọc được: báo một lần, phụ đề vẫn chạy theo nhịp đọc */
     fail(code) {
