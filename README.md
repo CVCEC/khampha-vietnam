@@ -63,6 +63,7 @@ Cả **31 trạm** đã có video Trâu Con 3D trong thư mục `video/` (mỗi 
 - Trang chạy được trong khung iframe của cổng **https://vietclass.cvcec.org/#vietnam**. Link về trường mở `https://vietclass.cvcec.org` với `target="_top"`.
 - `studio.html` là công cụ nội bộ, không gắn bộ mẫu.
 - **Giọng máy (ngoại lệ tạm thời, xem `CLAUDE.md`):** khi chưa có tệp giọng Elio cho một câu, trang vẫn đọc bằng giọng máy của thiết bị. Tạo dần giọng Elio bằng `studio.html` (mục 3). Chỉ gỡ giọng máy khi đã đủ tệp.
+- **Giọng máy qua bộ mẫu và ghi kết quả học (17-11-2026):** câu chưa có tệp Elio được đọc qua `TTV.phat({ chu })` của bộ mẫu (trang không tự gọi giọng máy); xong trò chơi hoặc đố vui của một trạm, trang gọi `TTV.ghiKetQua` (bai = mã trạm, hoatDong `tro-choi` / `do-vui`) để cổng ghi vào tài khoản.
 
 ## 6. Sửa hoặc thêm nội dung
 

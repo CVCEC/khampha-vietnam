@@ -85,45 +85,32 @@
   /* ---------------- Giọng đọc ----------------
      Mỗi câu nói là một danh sách "mảnh". Mảnh nào đã có file giọng Elio
      (js/audio-manifest.js) thì phát file; mảnh nào chưa có thì đọc bằng giọng
-     máy của thiết bị, chia thành từng câu ngắn để không bị ngắt giữa chừng. */
+     máy của thiết bị QUA BỘ MẪU (TTV.phat({ chu }), quy tắc 7 từ 17-11-2026),
+     chia thành từng câu ngắn để không bị ngắt giữa chừng. Lời đọc không gọi
+     speechSynthesis trực tiếp (chỉ còn bước mở khoá im lặng trong init). */
+  const ttvPhat = () => { const T = window.TTV; return T ? (T.phat || (T.giong && T.giong.phat) || null) : null; };
+  const ttvDung = () => { const T = window.TTV; try { if (T && T.giong && T.giong.dung) T.giong.dung(); } catch (e) { } };
   const Voice = KP.Voice = {
-    token: 0, vi: null, en: null, hasVi: false, audio: null,
-    keep: [], stat: { ok: 0, fail: 0, last: '' }, warned: 0, log: [],
+    token: 0, vi: null, hasVi: false, audio: null, ttsOn: false,
+    stat: { ok: 0, fail: 0, last: '' }, warned: 0, log: [],
     init() {
+      /* Máy có giọng tiếng Việt không (chỉ để báo trong Cài đặt); bộ mẫu tự chọn giọng */
+      try { const T = window.TTV; if (T && T.giong && T.giong.coGiongViet) T.giong.coGiongViet().then(c => { this.hasVi = !!c; }); } catch (e) { }
+      /* Lần chạm đầu tiên: "mở khoá" bộ đọc của máy bằng một câu RỖNG, âm lượng 0 (không đọc gì).
+         iPad, iPhone chỉ cho đọc khi câu đầu tiên đến từ một lần chạm; lời đọc theo phụ đề phim
+         chạy sau đó không phải do chạm. Bộ mẫu chưa có hàm mở khoá nên giữ chỗ này; mọi lời đọc
+         thật đều đi qua TTV.phat. */
       if (!('speechSynthesis' in window)) return;
-      /* Bỏ các giọng "vui" của macOS (Albert, Bubbles…) khi chọn giọng tiếng Anh */
-      const ODD = /^(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Pipe Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Deranged|Hysterical|Junior|Ralph|Fred|Kathy|Princess|Eddy|Flo|Grandma|Grandpa|Reed|Rocko|Sandy|Shelley)\b/i;
-      const rank = (v, lang) => {
-        if (lang === 'en' && ODD.test(v.name)) return -100;
-        let r = 0;
-        if (/natural|online|neural/i.test(v.name)) r += 50;
-        if (/enhanced|premium/i.test(v.name)) r += 30;
-        if (/google/i.test(v.name)) r += 20;
-        if (lang === 'vi' && /NamMinh|HoaiMy|Linh/i.test(v.name)) r += 10;
-        if (lang === 'en' && /en[-_]US/i.test(v.lang)) r += 8;
-        if (lang === 'en' && /Samantha|Aria|Jenny|Guy|Ava|Allison|Daniel|Karen/i.test(v.name)) r += 6;
-        return r;
-      };
-      const pickV = () => {
-        const all = speechSynthesis.getVoices();
-        const vi = all.filter(v => /^vi/i.test(v.lang)).sort((a, b) => rank(b, 'vi') - rank(a, 'vi'));
-        const en = all.filter(v => /^en/i.test(v.lang) && rank(v, 'en') > -100).sort((a, b) => rank(b, 'en') - rank(a, 'en'));
-        this.hasVi = vi.length > 0; this.vi = vi[0] || null; this.en = en[0] || null;
-      };
-      pickV(); speechSynthesis.onvoiceschanged = pickV;
-      /* Lần chạm đầu tiên: "mở khoá" giọng đọc (iPad, iPhone chỉ cho đọc khi có chạm) */
       const evs = ['pointerdown', 'touchend', 'keydown'];
       const unlock = () => {
         evs.forEach(ev => document.removeEventListener(ev, unlock, true));
         try {
           if (speechSynthesis.speaking || speechSynthesis.pending) return;
-          const u = new SpeechSynthesisUtterance(' '); u.volume = 0; this.hold(u); speechSynthesis.speak(u);
+          const u = new SpeechSynthesisUtterance(' '); u.volume = 0; this._moKhoa = u; speechSynthesis.speak(u);
         } catch (e) { }
       };
       evs.forEach(ev => document.addEventListener(ev, unlock, { capture: true, passive: true }));
     },
-    /* Giữ tham chiếu tới câu đang đọc (Chrome hay "quên" câu đọc nên không báo xong) */
-    hold(u) { this.keep.push(u); if (this.keep.length > 12) this.keep.shift(); },
     /* Máy không đọc được: báo một lần, phụ đề vẫn chạy theo nhịp đọc */
     fail(code) {
       this.stat.fail++; this.stat.last = code;
@@ -167,7 +154,7 @@
       }).catch(() => { if (my === this.token) fail(); });
     },
     busy() {
-      try { return !!(this.src || this.audio || ('speechSynthesis' in window && (speechSynthesis.speaking || speechSynthesis.pending))); } catch (e) { return false; }
+      return !!(this.src || this.audio || this.ttsOn);
     },
     say(parts, opts) {
       opts = opts || {};
@@ -200,7 +187,8 @@
     },
     pace(t) { return 600 + String(t).length * 75; },
     tts(t, lang, done, my) {
-      if (!('speechSynthesis' in window)) { this.fail('none'); setTimeout(() => { if (my === this.token) done(); }, this.pace(t)); return; }
+      const phat = ttvPhat();
+      if (!phat) { this.fail('none'); setTimeout(() => { if (my === this.token) done(); }, this.pace(t)); return; }
       const chunks = [];
       KP.splitSentences(t).forEach(c => {
         if (c.length <= 160) return chunks.push(c);
@@ -211,40 +199,24 @@
         if (my !== this.token) return;
         if (j >= chunks.length) { done(); return; }
         const text = chunks[j++];
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = lang === 'en' ? 'en-US' : 'vi-VN';
-        const v = lang === 'en' ? this.en : this.vi; if (v) u.voice = v;
-        u.rate = lang === 'en' ? .92 : .88; u.pitch = 1.1;
-        this.hold(u);
-        let fired = false, started = false;
+        let fired = false;
         const t0 = Date.now();
         const note = by => { this.log.push({ n: text.length, ms: Date.now() - t0, by }); if (this.log.length > 8) this.log.shift(); };
-        const go = by => { if (fired) return; fired = true; clearTimeout(guard); note(by || 'end'); one(); };
-        /* Không có tiếng: vẫn chờ đúng nhịp đọc rồi mới sang câu sau */
-        const later = code => {
-          if (fired) return; fired = true; clearTimeout(guard); note(code); this.fail(code);
-          setTimeout(one, Math.max(0, this.pace(text) - (Date.now() - t0)));
+        /* Đọc xong (hoặc không đọc được): sang câu sau; không có tiếng thì vẫn chờ đúng nhịp đọc */
+        const xong = (ok, by) => {
+          if (fired) return; fired = true; clearTimeout(guard); this.ttsOn = false; note(by);
+          if (my !== this.token) return;
+          if (ok) { this.stat.ok++; one(); return; }
+          this.fail(by); setTimeout(one, Math.max(0, this.pace(text) - (Date.now() - t0)));
         };
-        const guard = setTimeout(() => go('guard'), 3000 + text.length * 140);
-        u.onstart = () => { started = true; this.stat.ok++; };
-        /* Một số trình duyệt (ví dụ Chrome trên Mac khi trang nằm trong khung) không báo "đọc xong".
-           Vì vậy trang tự kiểm tra: máy thôi đọc thì coi như xong câu. */
-        const iv = setInterval(() => {
-          if (fired) { clearInterval(iv); return; }
-          const el = Date.now() - t0; let sp = true;
-          try { sp = speechSynthesis.speaking || speechSynthesis.pending; } catch (e) { }
-          if (!sp && el > 350) { clearInterval(iv); if (started) go('poll'); else if (el > 1200) later('poll0'); }
-        }, 200);
-        u.onend = () => { if (!started && Date.now() - t0 < 300 && text.length > 3) later('silent'); else go('end'); };
-        u.onerror = e => {
-          const c = (e && e.error) || 'error';
-          if (c === 'interrupted' || c === 'canceled') { if (my !== this.token) return; return go(c); }
-          later(c);
-        };
-        try { if (speechSynthesis.paused) speechSynthesis.resume(); speechSynthesis.speak(u); }
-        catch (e) { later('exception'); }
-        /* Máy nhận câu nhưng 2 giây vẫn chưa đọc: bộ đọc của máy đang bị kẹt */
-        setTimeout(() => { if (!fired && !started) { try { speechSynthesis.cancel(); } catch (e) { } later('nostart'); } }, 2000);
+        /* Một số trình duyệt (ví dụ Chrome trên Mac khi trang nằm trong khung) không báo "đọc xong":
+           quá thời gian thì coi như xong câu. */
+        const guard = setTimeout(() => xong(true, 'guard'), 3000 + text.length * 140);
+        this.ttsOn = true;
+        try {
+          Promise.resolve(phat({ chu: text }, { ngonNgu: lang === 'en' ? 'en' : 'vi', toc: lang === 'en' ? .92 : .88 }))
+            .then(ok => xong(!!ok, ok ? 'end' : 'silent'), () => xong(false, 'error'));
+        } catch (e) { xong(false, 'exception'); }
       };
       one();
     },
@@ -253,7 +225,7 @@
       /* Báo cho phần đang đọc dở biết là đã bị dừng (ví dụ phim tự chuyển sang "tạm dừng") */
       const c = this.cur; this.cur = null;
       if (c && c.onstop) { try { c.onstop(); } catch (e) { } }
-      try { if ('speechSynthesis' in window && (speechSynthesis.speaking || speechSynthesis.pending || speechSynthesis.paused)) speechSynthesis.cancel(); } catch (e) { }
+      if (this.ttsOn) { this.ttsOn = false; ttvDung(); }
       if (this.audio) { try { this.audio.pause(); } catch (e) { } this.audio = null; }
       if (this.src) { try { this.src.onended = null; this.src.stop(); } catch (e) { } this.src = null; }
     }
@@ -770,8 +742,21 @@
   }
 
   /* --- Bước 4: Trò chơi --- */
+  /* Ghi kết quả lên cổng (TTV.ghiKetQua, từ 17-11-2026). Mỗi trạm có 2 bước tính kết quả:
+     trò chơi của trạm ("tro-choi") và đố vui ("do-vui"). bai = mã trạm (ví dụ "lung-cu").
+     Không tạo khoá localStorage mới; tiến trình vẫn nằm ở kpvn-tien-trinh-v1. */
+  const HD_TRAM = ['tro-choi', 'do-vui'];
+  function ghiKetQua(s, hoatDong, diem, diemToiDa, t0, xong) {
+    try {
+      if (!window.TTV || !window.TTV.ghiKetQua) return;
+      const tl = diemToiDa ? diem / diemToiDa : 1;
+      window.TTV.ghiKetQua({ bai: s.id, hoatDong, soTroChoi: HD_TRAM.length, diem, diemToiDa,
+        sao: tl >= 0.9 ? 3 : tl >= 0.6 ? 2 : tl > 0 ? 1 : 0, thoiGianGiay: Math.round((Date.now() - t0) / 1000), xong: xong !== false });
+    } catch (e) { }
+  }
+
   function stepGame(box, s) {
-    const g = s.game;
+    const g = s.game, t0 = Date.now(); let daGhi = false;
     box.innerHTML = `<div class="step-h"><h2>🎮 ${esc(g.title)}</h2></div>`;
     box.appendChild(hintLine(g.intro));
     box.appendChild(KP.enBtn(s.en.game));
@@ -785,6 +770,7 @@
         const d = document.createElement('div'); d.className = 'g-done';
         d.innerHTML = `<span class="emo">🎉</span><b>${esc(g.doneMsg || 'Hoàn thành trò chơi!')}</b>`;
         root.appendChild(d); stepOk(); setTimeout(() => d.scrollIntoView({ behavior: 'smooth', block: 'center' }), 200);
+        if (!daGhi) { daGhi = true; ghiKetQua(s, 'tro-choi', 1, 1, t0); }
         Voice.say(g.doneMsg || pick(PH.praise));
       },
       alive: () => !!(SV && SV.s === s && SV.cur === 3 && document.body.contains(root))
@@ -816,7 +802,7 @@
 
   /* --- Bước 6: Đố vui (có gợi ý và giải thích) --- */
   function stepQuiz(box, s) {
-    const qs = s.quiz; let qi = 0; const res = [];
+    const qs = s.quiz; let qi = 0; const res = []; let t0 = Date.now();
     const draw = () => {
       const q = qs[qi], key = s.keys[q.k];
       const order = shuffle(q.o.map((t, k) => ({ t, k })));
@@ -856,13 +842,14 @@
     };
     const finish = () => {
       const n = res.filter(Boolean).length, pass = n >= 2;
+      ghiKetQua(s, 'do-vui', n, qs.length, t0, pass);
       box.innerHTML = `<div class="step-h"><h2>❓ Đố vui</h2></div><div class="card g-done"><span class="emo">${pass ? '🏆' : '💪'}</span>
         <b>Bạn trả lời đúng ${n}/${qs.length} câu!</b><p style="font-size:18px;font-weight:700">${pass ? esc(PH.quizPass) : 'Gần được rồi! Cần đúng ít nhất 2 câu. Mình xem lại phần Ghi nhớ rồi chơi lại nhé!'}</p>
         ${pass ? '' : '<div class="row" style="justify-content:center"><button class="btn ghost sm" id="qKeys">🔑 Xem lại Ghi nhớ</button><button class="btn peach" id="qAgain">↻ Chơi lại</button></div>'}</div>`;
       if (pass) { stepOk(); Snd.star(); Voice.say(PH.quizPass); }
       else {
         Voice.say(PH.quizFail);
-        $('#qAgain').onclick = () => { qi = 0; res.length = 0; draw(); };
+        $('#qAgain').onclick = () => { qi = 0; res.length = 0; t0 = Date.now(); draw(); };
         $('#qKeys').onclick = () => goStep(1);
       }
     };
