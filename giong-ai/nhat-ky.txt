@@ -1,1 +1,12 @@
-Lô 20 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+Lô 20 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+Lô 20 câu có đoạn cắt hỏng (một: đoạn quá ngắn) – chia đôi để đọc lại
+0.95  Chào các bạn! Mình là Trâu Con. Cùng mình đi từ Cột cờ Lũng Cú tới Đất Mũi Cà Mau nhé!  |  Chào các bạn! Mình là Châu Con. Cùng mình đi từ Cột Cờ Lũng Cú tới đất mũi Cà Mau nhé!
+1.00  Đúng rồi!  |  Đúng rồi!
+1.00  Giỏi quá!  |  Giỏi quá!
+1.00  Tuyệt vời!  |  Tuyệt vời!
+1.00  Chính xác!  |  Chính xác
+1.00  Hay lắm!  |  Hay lắm!
+1.00  Chưa đúng rồi, thử lại nhé!  |  Chưa đúng rồi, thử lại nhé!
+1.00  Đây là  |  Đây là...
+1.00  không  |  Không
+0.00  một  |  Mốt
