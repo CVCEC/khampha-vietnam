@@ -1,45 +1,21 @@
 Lô 20 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
-Lô 20 câu có đoạn cắt hỏng (một: đoạn quá ngắn) – chia đôi để đọc lại
-0.95  Chào các bạn! Mình là Trâu Con. Cùng mình đi từ Cột cờ Lũng Cú tới Đất Mũi Cà Mau nhé!  |  Chào các bạn! Mình là Châu Con. Cùng mình đi từ Cột Cờ Lũng Cú tới đất mũi Cà Mau nhé!
-1.00  Đúng rồi!  |  Đúng rồi!
-1.00  Giỏi quá!  |  Giỏi quá!
-1.00  Tuyệt vời!  |  Tuyệt vời!
-1.00  Chính xác!  |  Chính xác
-1.00  Hay lắm!  |  Hay lắm!
-1.00  Chưa đúng rồi, thử lại nhé!  |  Chưa đúng rồi, thử lại nhé!
-1.00  Đây là  |  Đây là...
-1.00  không  |  Không
-0.00  một  |  Mốt
-Lô 10 câu có 5 câu lệch nhiều – có thể cắt sai, chia đôi để đọc lại
-Lô 5 câu có 4 câu lệch nhiều – có thể cắt sai, chia đôi để đọc lại
-0.00  hai  |  Hi!
-0.00  ba  |  Bye!
-0.00  bốn  |  Môn?
-0.00  năm  |  Nam
-1.00  sáu  |  Sáu
-0.00  bảy  |  BÂY!
-0.00  tám  |  Tạm?
-1.00  chín  |  Chín
-1.00  mười  |  Mười
-0.88  Các bạn xem phim cùng Trâu Con nhé!  |  Các bạn xem phim cùng châu con nhé!
-Lô 20 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
-1.00  Các bạn hãy nhớ nhé:  |  Các bạn hãy nhớ nhé!
-1.00  Đây là những điều cần ghi nhớ. Chạm vào từng thẻ để nghe nhé!  |  Đây là những điều cần ghi nhớ, chạm vào từng thẻ để nghe nhé!
-0.92  Chạm vào từng thẻ để nghe, rồi đọc to theo Trâu Con nhé!  |  Chạm vào từng thẻ để nghe, rồi đọc to theo châu con nhé!
-0.91  Chạm vào thẻ Bạn có biết để mở bí mật nhé!  |  Trạm vào thẻ Bạn có biết để mở bí mật nhé.
-0.75  Đáp án đúng là:  |  Đáp ảnh đúng là
-0.50  Gợi ý:  |  Gờ Ý
-0.89  Tuyệt vời! Ngôi sao vàng đang chờ bạn đó.  |  Tuyệt vời! Ngoi sao vàng đang chờ bạn đó!
-1.00  Gần được rồi! Mình xem lại phần Ghi nhớ rồi chơi lại nhé!  |  Gần được rồi! Mình xem lại phần ghi nhớ rồi chơi lại nhé!
-1.00  Hoan hô! Bạn nhận được một ngôi sao vàng!  |  Hoan hô! Bạn nhận được một ngôi sao vàng!
-1.00  Bạn đã có ngôi sao vàng ở trạm này rồi!  |  Bạn đã có ngôi sao vàng ở trạm này rồi.
-1.00  Bạn còn nhận được huy hiệu mới!  |  bạn còn nhận được huy hiệu mới.
-0.91  Hoan hô! Bạn đã đi trọn hành trình từ Lũng Cú tới Cà Mau và trở thành Nhà thám hiểm nhí Việt Nam!  |  Hoan Hô, bạn đã đi chọn hành trình từ Lũng Cú tới Cà Mâu và trở thành nhà thám hiểm nhí Việt Nam.
-1.00  Hình này là chữ nào?  |  Hình này là chữ nào?
-0.50  Hướng Bắc  |  Hứng bắc
-1.00  Hướng Đông  |  Hướng Đông
-0.50  Hướng Nam  |  Hướng 5
-0.33  Hướng Tây  |  Hướng tươi, hướng ta
-0.80  Chưa đúng thứ tự. Bước tiếp theo là gì nhỉ?  |  Chưa đúng thú tượng, bước tiếp theo là gì nhỉ?
-1.00  Chạm vào tên phố, rồi chạm vào món hàng của phố đó!  |  chạm vào tên phố, rồi chạm vào món hàng của phố đó.
-0.00  Phố  |  Phú
+0.00  bán  |  Bản
+1.00  Tìm giúp mình:  |  Tìm giúp mình
+0.67  Tìm thấy rồi!  |  Tiềm thấy rồi
+1.00  Đi vào hang có chữ:  |  Đi vào hang có chữ
+0.80  Trượt xuống đồi có chữ:  |  trượt xuống đôi có chữ
+1.00  Không phải chỗ này rồi. Đây là chữ:  |  Không phải chỗ này rồi, đây là chữ
+0.33  Soi đèn tìm:  |  Sói đèn tim
+1.00  Chạm vào ông mặt trời để soi nón lên nắng!  |  chạm vào ông mặt trời để soi nón lên nắng.
+0.77  Woa! Trong nón có hình tháp chùa Thiên Mụ và câu ca dao:  |  Wow, tròng nón có hình tháp chúa thiên mụ và câu ca dao.
+1.00  Chạm vào các chữ theo đúng thứ tự câu ca dao nhé!  |  chạm vào các chữ theo đúng thứ tự câu ca dao nhé.
+0.33  Thắp đèn lồng  |  thấp đèn lông
+0.50  Đây là đèn lồng  |  Đây là đen lông
+1.00  Thả thuyền trong lễ Khao lề!  |  Thả thuyền trong lễ khao lề
+1.00  Giúp rùa con về biển nào!  |  Giúp rùa con về biển nào!
+1.00  chú rùa đã về biển!  |  Chú rùa đã về biển
+1.00  Gợi ý: chạm vào vòng tròn màu vàng nhé!  |  gợi ý, chạm vào vòng tròn màu vàng nhé!
+1.00  nghĩa là gì?  |  nghĩa là gì?
+1.00  nghĩa là  |  nghĩa là
+1.00  Chạm vào ông mặt trời để đón bình minh!  |  Chạm vào, ông mặt trời để đón bình minh.
+0.92  Bình minh lên rồi! Mũi Đôi đón mặt trời sớm nhất Việt Nam.  |  Bình Minh lên rồi, mỗi đôi đón mặt trời sớm nhất Việt Nam.
