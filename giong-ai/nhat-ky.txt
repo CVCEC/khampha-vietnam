@@ -14,3 +14,6 @@ Lô 10 câu có 5 câu lệch nhiều – có thể cắt sai, chia đôi để 
 Lô 5 câu có 4 câu lệch nhiều – có thể cắt sai, chia đôi để đọc lại
 0.00  hai  |  Hi!
 0.00  ba  |  Bye!
+0.00  bốn  |  Môn?
+0.00  năm  |  Nam
+1.00  sáu  |  Sáu
