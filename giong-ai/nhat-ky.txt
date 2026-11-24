@@ -22,3 +22,24 @@ Lô 5 câu có 4 câu lệch nhiều – có thể cắt sai, chia đôi để �
 1.00  chín  |  Chín
 1.00  mười  |  Mười
 0.88  Các bạn xem phim cùng Trâu Con nhé!  |  Các bạn xem phim cùng châu con nhé!
+Lô 20 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+1.00  Các bạn hãy nhớ nhé:  |  Các bạn hãy nhớ nhé!
+1.00  Đây là những điều cần ghi nhớ. Chạm vào từng thẻ để nghe nhé!  |  Đây là những điều cần ghi nhớ, chạm vào từng thẻ để nghe nhé!
+0.92  Chạm vào từng thẻ để nghe, rồi đọc to theo Trâu Con nhé!  |  Chạm vào từng thẻ để nghe, rồi đọc to theo châu con nhé!
+0.91  Chạm vào thẻ Bạn có biết để mở bí mật nhé!  |  Trạm vào thẻ Bạn có biết để mở bí mật nhé.
+0.75  Đáp án đúng là:  |  Đáp ảnh đúng là
+0.50  Gợi ý:  |  Gờ Ý
+0.89  Tuyệt vời! Ngôi sao vàng đang chờ bạn đó.  |  Tuyệt vời! Ngoi sao vàng đang chờ bạn đó!
+1.00  Gần được rồi! Mình xem lại phần Ghi nhớ rồi chơi lại nhé!  |  Gần được rồi! Mình xem lại phần ghi nhớ rồi chơi lại nhé!
+1.00  Hoan hô! Bạn nhận được một ngôi sao vàng!  |  Hoan hô! Bạn nhận được một ngôi sao vàng!
+1.00  Bạn đã có ngôi sao vàng ở trạm này rồi!  |  Bạn đã có ngôi sao vàng ở trạm này rồi.
+1.00  Bạn còn nhận được huy hiệu mới!  |  bạn còn nhận được huy hiệu mới.
+0.91  Hoan hô! Bạn đã đi trọn hành trình từ Lũng Cú tới Cà Mau và trở thành Nhà thám hiểm nhí Việt Nam!  |  Hoan Hô, bạn đã đi chọn hành trình từ Lũng Cú tới Cà Mâu và trở thành nhà thám hiểm nhí Việt Nam.
+1.00  Hình này là chữ nào?  |  Hình này là chữ nào?
+0.50  Hướng Bắc  |  Hứng bắc
+1.00  Hướng Đông  |  Hướng Đông
+0.50  Hướng Nam  |  Hướng 5
+0.33  Hướng Tây  |  Hướng tươi, hướng ta
+0.80  Chưa đúng thứ tự. Bước tiếp theo là gì nhỉ?  |  Chưa đúng thú tượng, bước tiếp theo là gì nhỉ?
+1.00  Chạm vào tên phố, rồi chạm vào món hàng của phố đó!  |  chạm vào tên phố, rồi chạm vào món hàng của phố đó.
+0.00  Phố  |  Phú
