@@ -56,3 +56,4 @@ Lô 18 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.85  Bây giờ, các bạn cùng học thẻ từ và chơi trò chơi nhé!  |  Bây giờ, các bạn cùng học thẻ từ và chơi chò chôi nhé!
 1.00  Hẹn gặp lại các bạn!  |  Hẹn gặp lại các bạn!
 1.00  Cột cờ Lũng Cú rất cao.  |  Cột cờ lũng cú rất cao.
+Lô 20 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
