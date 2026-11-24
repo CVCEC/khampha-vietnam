@@ -38,3 +38,21 @@ Lô 18 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.50  cây đước!  |  cây đuốc
 0.83  Rừng đước đã xanh! Chạm vào mũi đất để cắm cờ nhé!  |  Dừng đuốc đã xanh, chạm vào mũi đất để cắm cờ nhé!
 1.00  Chúng mình đã cắm cờ ở Đất Mũi Cà Mau, điểm cực Nam của Tổ quốc!  |  Chúng mình đã cắm cờ ở đất mũi Cà Mau, điểm cực nam của tổ quốc.
+0.96  Trâu Con bay từ Canada về Việt Nam, rồi đi xe máy qua những con đèo uốn lượn của cao nguyên đá Đồng Văn để lên Lũng Cú.  |  Châu con bay từ Canada về Việt Nam, rồi đi xe máy qua những con đèo uốn lượn của cao nguyên đá đồng văn để lên lũng cú.
+1.00  Chào các bạn!  |  Chào các bạn.
+1.00  Mình đang đứng ở Cột cờ Lũng Cú – nơi địa đầu Tổ quốc, rất gần điểm cực Bắc của Việt Nam.  |  Mình đang đứng ở Cột Cờ Lũng Cú, nơi địa đầu tổ quốc, rất gần điểm cực bắc của Việt Nam.
+1.00  Cột cờ nằm trên đỉnh núi Rồng.  |  Cột cờ nằm trên đỉnh núi rồng.
+0.92  Lá cờ đỏ sao vàng ở đây tung bay giữa trời mây.  |  Lá cờ đỏ sao vàng ở đây tung bay giữa trồi mây.
+0.93  Cột cờ Lũng Cú ở miền Bắc, gần điểm cực Bắc của Việt Nam.  |  Cột cơ lũng cú ở miền Bắc, gần điểm cực Bắc của Việt Nam.
+0.92  Lá cờ Việt Nam nền đỏ, có ngôi sao vàng năm cánh.  |  Lá cầu Việt Nam nền đỏ, có ngôi sao vàng năm cánh
+1.00  Việt Nam có 54 dân tộc anh em.  |  Việt Nam có 54 dân tộc anh em.
+0.88  Xin chào các bạn! Mình là Trâu Con.  |  Xin chào các bạn! Mình là châu con!
+0.93  Hôm nay, mình đưa các bạn đến Cột cờ Lũng Cú ở tỉnh Tuyên Quang.  |  Hôm nay mình đưa các bạn đến Cột Cở Lũng Cú ở tỉnh Tuyên Quang.
+1.00  Các bạn đọc theo mình nhé:  |  Các bạn đọc theo mình nhé
+0.50  cột cờ  |  Cột cơ
+0.50  ngôi sao  |  Môi sao?
+1.00  màu đỏ  |  màu đỏ
+0.50  ngọn núi  |  Ngọt núi?
+0.85  Bây giờ, các bạn cùng học thẻ từ và chơi trò chơi nhé!  |  Bây giờ, các bạn cùng học thẻ từ và chơi chò chôi nhé!
+1.00  Hẹn gặp lại các bạn!  |  Hẹn gặp lại các bạn!
+1.00  Cột cờ Lũng Cú rất cao.  |  Cột cờ lũng cú rất cao.
