@@ -17,3 +17,8 @@ Lô 5 câu có 4 câu lệch nhiều – có thể cắt sai, chia đôi để �
 0.00  bốn  |  Môn?
 0.00  năm  |  Nam
 1.00  sáu  |  Sáu
+0.00  bảy  |  BÂY!
+0.00  tám  |  Tạm?
+1.00  chín  |  Chín
+1.00  mười  |  Mười
+0.88  Các bạn xem phim cùng Trâu Con nhé!  |  Các bạn xem phim cùng châu con nhé!
