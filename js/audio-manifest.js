@@ -11,8 +11,10 @@ window.AUDIO_FILES = {
 "v3db2c063": "audio/kore/v3db2c063.mp3",
 "v4c7e3af6": "audio/kore/v4c7e3af6.mp3",
 "v4e0e6a8d": "audio/kore/v4e0e6a8d.mp3",
+"v6feb36d2": "audio/kore/v6feb36d2.mp3",
 "v80b20284": "audio/kore/v80b20284.mp3",
 "v82a92dad": "audio/kore/v82a92dad.mp3",
 "v8fb4dede": "audio/kore/v8fb4dede.mp3",
-"v962684ea": "audio/kore/v962684ea.mp3"
+"v962684ea": "audio/kore/v962684ea.mp3",
+"vfbe2b619": "audio/kore/vfbe2b619.mp3"
 };
