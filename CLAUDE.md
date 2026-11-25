@@ -36,8 +36,8 @@
 5. Tiếng Việt: chuẩn hoá NFC khi so sánh chữ; đọc chữ cái theo âm (a, bờ, cờ, dờ…); không ghi cách đọc dưới chữ.
 6. Trâu Con xưng "mình", gọi học sinh "các bạn"; hiền, ấm, chậm.
 7. Âm thanh: ưu tiên tệp giọng chuẩn của trường. Từ 17-11-2026, khi chưa có tệp thì TẠM dùng giọng máy của thiết bị, nhưng chỉ qua bộ mẫu: `TTV.phat({tep, chu})` (có tệp thì phát tệp, không có thì đọc `chu`) hoặc `TTV.giong.doc(chu)`. Không gọi speechSynthesis trực tiếp trong trang. Tên chữ cái đưa cho giọng máy theo âm (`TTV.giong.tenChuCai("b")` → "bờ"). Câu cần thu âm ghi vào kịch bản thu âm (am-thanh/ của kho mau-chung).
-   - NGOẠI LỆ RIÊNG KHO khampha-vietnam (tạm thời): giữ giọng máy làm dự phòng khi chưa có tệp giọng Elio; tạo dần bằng studio.html. Không gỡ cho đến khi đủ tệp. Xem README.
-     Từ 17-11-2026 giọng máy dự phòng đi qua bộ mẫu: js/app.js (Voice.tts) gọi TTV.phat({ chu }) cho từng câu ngắn; tệp Elio (js/audio-manifest.js) vẫn được ưu tiên. Trang không còn chạm speechSynthesis: bộ mẫu tự mở khoá giọng máy ở lần chạm đầu (iPad). studio.html là công cụ nội bộ, để nguyên.
+   - NGOẠI LỆ RIÊNG KHO khampha-vietnam (tạm thời): giữ giọng máy làm dự phòng khi chưa có tệp giọng (giọng AI Kore); robot giong-ai tạo dần (studio.html đã ngừng dùng từ 25-11-2026). Không gỡ cho đến khi đủ tệp. Xem README.
+     Từ 17-11-2026 giọng máy dự phòng đi qua bộ mẫu: js/app.js (Voice.tts) gọi TTV.phat({ chu }) cho từng câu ngắn; tệp giọng (js/audio-manifest.js) vẫn được ưu tiên. Trang không còn chạm speechSynthesis: bộ mẫu tự mở khoá giọng máy ở lần chạm đầu (iPad).
 8. Không đưa tên, logo Khai Minh Đức lên game và slide.
 9. Không hiện tên trẻ, phụ huynh. Triển lãm và Về Nhà Em chỉ để xem (hạn chế tải về) và có ghi chú điều khoản sử dụng, liên hệ contact@cvcec.org.
 10. Mỗi trang tối đa 1 GB; mỗi tệp dưới 25 MB. Hỏi tôi trước khi thêm video mới.

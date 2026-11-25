@@ -2,7 +2,7 @@
    VIDEO GIỚI THIỆU (MP4) CHO TỪNG TRẠM – phim Trâu Con 3D
    Phim chỉ có hình và phụ đề. Trang đọc từng câu (cues) đúng lúc phụ đề hiện
    ra: t = giây bắt đầu, d = độ dài, sub = phụ đề, say = câu đọc (nếu khác phụ
-   đề, ví dụ "a, bờ, cờ"). Các câu này cũng có trong studio.html để tạo giọng Elio.
+   đề, ví dụ "a, bờ, cờ"). Các câu này cũng có trong giong-ai/can-doc.tsv để robot tạo giọng.
    Trạm nào không có trong danh sách thì trang tự chiếu phim hoạt hình.
    File này được tạo bằng scripts/make_manifest.py trong bộ công cụ video.
    ========================================================= */

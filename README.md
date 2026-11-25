@@ -34,25 +34,21 @@ Repo nằm trong tổ chức (Organization) **CVCEC** trên GitHub; tài khoản
 
 Sau khi tên miền chạy (từ 15 phút đến vài giờ), vào **Settings → Pages** và tích **Enforce HTTPS**. Phần **ghi âm bưu thiếp** cần https mới chạy được.
 
-## 3. Giọng Trâu Con (Elio) – công cụ `studio.html`
+## 3. Giọng Trâu Con (giọng AI Kore) – robot `giong-ai/`
 
-Mở **https://vietnam.cvcec.org/studio.html** trên máy tính, bằng Chrome hoặc Edge. Trang này không có đường dẫn trên trang học.
+Từ 25-11-2026 mọi góc học dùng chung một giọng Trâu Con: **giọng AI Kore** (Google Gemini, miền Bắc). Robot trên GitHub Actions (`.github/workflows/giong-ai.yml` → `tools/giong_ai.py`) đọc các câu trong `giong-ai/can-doc.tsv` mỗi ngày, lưu tệp vào `audio/kore/` và ghi `js/audio-manifest.js` (`tools/gan_giong.py`). Xem tiến độ ở `giong-ai/trang-thai.md`, cách dùng ở `giong-ai/README.md`.
 
-1. Dán **mã API của Google AI Studio** (aistudio.google.com → Get API key). Mã chỉ lưu trong trình duyệt của máy đó.
-2. Kiểm tra **Tên giọng** (mặc định `Elio`) và **Model**. Nếu không chắc, mở AI Studio → Generate speech → **Get code** để xem đúng tên.
-3. Bấm **Nghe thử một câu**. Nếu nghe ổn, bấm **Bắt đầu / Tiếp tục**.
-   - Trang tự đọc lần lượt khoảng 1.200 câu tiếng Việt (thêm khoảng 430 câu tiếng Anh nếu tích ô tiếng Anh).
-   - Gói miễn phí giới hạn số lần mỗi ngày. Khi hết lượt, trang báo; hôm sau mở lại và bấm **Tiếp tục**, trang sẽ làm tiếp từ câu đang dở.
-4. Bấm **Tải gói giọng (.zip)** bất cứ lúc nào. Giải nén, rồi tải thư mục `audio` và file `js/audio-manifest.js` lên GitHub (thay file cũ).
+- Mã API dùng chung khoảng 100 lượt/ngày cho mọi góc, nên mỗi góc có trần lượt gọi trong `giong-ai/chay.txt` (`TOI_DA_LUOT`, kho này 30).
+- `studio.html` (tạo giọng "Elio" bằng tay) đã ngừng dùng: tải gói của nó sẽ thay `js/audio-manifest.js` và xoá mất các câu robot đã làm.
 
-Câu nào chưa có giọng Elio, trang vẫn đọc bằng giọng máy của thiết bị.
+Câu nào chưa có tệp giọng, trang vẫn tạm đọc bằng giọng máy của thiết bị (qua bộ mẫu).
 
 ## 4. Video MP4 Trâu Con 3D
 
 Cả **31 trạm** đã có video Trâu Con 3D trong thư mục `video/` (mỗi file khoảng 3,5 MB, 720p, dài khoảng 1 phút 15 giây; Văn Miếu dài 2 phút). Mỗi phim gồm: tên trạm → câu chuyện kèm tranh minh hoạ → Từ mới (bé đọc theo) → Các bạn hãy nhớ nhé → lời chào.
 
-- Video chỉ có hình và phụ đề. Khi bé xem trên trang, Trâu Con đọc từng câu đúng lúc phụ đề hiện ra. Nếu đã chạy `studio.html` thì Trâu Con đọc bằng giọng Elio, chưa chạy thì đọc bằng giọng máy. Nếu Trâu Con đọc chậm hơn phim, phim tự chờ đọc xong câu rồi mới chạy tiếp.
-- Danh sách câu của từng video nằm trong `js/video-manifest.js` (mục `cues`). Các câu này cũng có trong `studio.html` để tạo giọng Elio.
+- Video chỉ có hình và phụ đề. Khi bé xem trên trang, Trâu Con đọc từng câu đúng lúc phụ đề hiện ra. Câu đã có tệp giọng thì Trâu Con đọc bằng giọng AI Kore, chưa có thì đọc bằng giọng máy. Nếu Trâu Con đọc chậm hơn phim, phim tự chờ đọc xong câu rồi mới chạy tiếp.
+- Danh sách câu của từng video nằm trong `js/video-manifest.js` (mục `cues`). Các câu này cũng có trong danh sách của robot giọng đọc AI (`giong-ai/can-doc.tsv`).
 - Thêm video cho trạm khác: chép file vào thư mục `video/`, rồi thêm một khối mới vào `js/video-manifest.js` theo mẫu của Văn Miếu. Mã trạm xem trong `js/stops.js` (dòng `id:`).
 
 ## 5. Bộ mẫu chung "Làng Trâu Con", ảnh Trâu Con và logo
@@ -61,17 +57,17 @@ Cả **31 trạm** đã có video Trâu Con 3D trong thư mục `video/` (mỗi 
 - Trong `css/style.css`, các biến cũ (`--ink`, `--bg`, `--green`…) trỏ sang biến `--ttv-*`. Màu bản đồ, màu chặng, màu đúng/sai và nút EN là màu riêng của trang.
 - Ảnh Trâu Con (`trau-wave.png`) và logo (`logo.png`) lấy từ `https://mau.cvcec.org/assets/`. Không chép, không vẽ lại.
 - Trang chạy được trong khung iframe của cổng **https://vietclass.cvcec.org/#vietnam**. Link về trường mở `https://vietclass.cvcec.org` với `target="_top"`.
-- `studio.html` là công cụ nội bộ, không gắn bộ mẫu.
-- **Giọng máy (ngoại lệ tạm thời, xem `CLAUDE.md`):** khi chưa có tệp giọng Elio cho một câu, trang vẫn đọc bằng giọng máy của thiết bị. Tạo dần giọng Elio bằng `studio.html` (mục 3). Chỉ gỡ giọng máy khi đã đủ tệp.
-- **Giọng máy qua bộ mẫu và ghi kết quả học (17-11-2026):** câu chưa có tệp Elio được đọc qua `TTV.phat({ chu })` của bộ mẫu (trang không tự gọi giọng máy); xong trò chơi hoặc đố vui của một trạm, trang gọi `TTV.ghiKetQua` (bai = mã trạm, hoatDong `tro-choi` / `do-vui`) để cổng ghi vào tài khoản.
+- `studio.html` chỉ còn là trang báo đã ngừng dùng (không gắn bộ mẫu).
+- **Giọng máy (ngoại lệ tạm thời, xem `CLAUDE.md`):** khi chưa có tệp giọng cho một câu, trang vẫn đọc bằng giọng máy của thiết bị. Robot giọng đọc AI tạo dần các tệp (mục 3). Chỉ gỡ giọng máy khi đã đủ tệp.
+- **Giọng máy qua bộ mẫu và ghi kết quả học (17-11-2026):** câu chưa có tệp giọng được đọc qua `TTV.phat({ chu })` của bộ mẫu (trang không tự gọi giọng máy); xong trò chơi hoặc đố vui của một trạm, trang gọi `TTV.ghiKetQua` (bai = mã trạm, hoatDong `tro-choi` / `do-vui`) để cổng ghi vào tài khoản.
 
 ## 6. Sửa hoặc thêm nội dung
 
-Toàn bộ chữ của 31 trạm nằm trong **`js/stops.js`**. Bạn có thể sửa trực tiếp trên GitHub (biểu tượng bút chì) rồi Commit. Câu nào đã sửa sẽ hiện lại là "chưa có" trong `studio.html` để tạo giọng mới. Muốn thêm trạm, chép một khối trạm có sẵn rồi đổi nội dung.
+Toàn bộ chữ của 31 trạm nằm trong **`js/stops.js`**. Bạn có thể sửa trực tiếp trên GitHub (biểu tượng bút chì) rồi Commit. Câu đã sửa cần cập nhật trong `giong-ai/can-doc.tsv` để robot đọc lại. Muốn thêm trạm, chép một khối trạm có sẵn rồi đổi nội dung.
 
 ## 7. Ghi chú khác
 
-- **Bộ đọc của máy bị kẹt:** đôi khi bộ đọc giọng của máy tính bị kẹt (máy nhận câu nhưng không đọc, mọi trang đều im). Trang sẽ báo, và phụ đề vẫn chạy. Cách sửa: thoát hẳn trình duyệt (trên Mac bấm ⌘Q) rồi mở lại; nếu vẫn vậy thì khởi động lại máy. Khi đã có giọng Elio (file MP3), trang không cần bộ đọc của máy nữa.
+- **Bộ đọc của máy bị kẹt:** đôi khi bộ đọc giọng của máy tính bị kẹt (máy nhận câu nhưng không đọc, mọi trang đều im). Trang sẽ báo, và phụ đề vẫn chạy. Cách sửa: thoát hẳn trình duyệt (trên Mac bấm ⌘Q) rồi mở lại; nếu vẫn vậy thì khởi động lại máy. Khi đã có tệp giọng Trâu Con (file MP3), trang không cần bộ đọc của máy nữa.
 - **Không nghe thấy giọng đọc:** mở ⚙️ **Cài đặt** → **▶ Nghe thử giọng**. Trang sẽ báo máy có đọc được không và đang dùng giọng nào. Nếu máy báo đọc được mà vẫn không nghe thấy, hãy kiểm tra âm lượng và loa của máy. Khi máy không đọc được, phụ đề vẫn chạy theo nhịp đọc để bé đọc theo.
 - **Hình trên thẻ từ:** một số hình (thác nước, dòng sông, hồ nước, chợ nổi, hang động, bánh chưng…) được vẽ riêng trong `js/icons.js`. Trong `js/stops.js`, hình vẽ riêng ghi dạng `i: 'svg:waterfall'`; các hình khác là emoji.
 - **Mở khoá:** trạm sau mở khi trạm trước đã có sao. Bố mẹ hoặc thầy cô có thể mở khoá bằng một phép nhân.

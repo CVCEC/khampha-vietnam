@@ -83,7 +83,7 @@
   };
 
   /* ---------------- Giọng đọc ----------------
-     Mỗi câu nói là một danh sách "mảnh". Mảnh nào đã có file giọng Elio
+     Mỗi câu nói là một danh sách "mảnh". Mảnh nào đã có file giọng Trâu Con (Kore)
      (js/audio-manifest.js) thì phát file; mảnh nào chưa có thì đọc bằng giọng
      máy của thiết bị QUA BỘ MẪU (TTV.phat({ chu }), quy tắc 7 từ 17-11-2026),
      chia thành từng câu ngắn để không bị ngắt giữa chừng. Lời đọc không gọi
@@ -572,7 +572,7 @@
     const vf = window.VIDEO_FILES && window.VIDEO_FILES[s.id];
     if (vf) {
       /* Video MP4 (phim Trâu Con 3D). Phim chỉ có hình và phụ đề; Trâu Con đọc từng câu
-         đúng lúc phụ đề hiện ra (giọng Elio nếu đã có, chưa có thì giọng máy).
+         đúng lúc phụ đề hiện ra (giọng Trâu Con nếu đã có tệp, chưa có thì giọng máy).
          Nếu đọc chưa xong mà phim đã tới câu sau, phim tạm chờ đọc xong rồi chạy tiếp. */
       const src = typeof vf === 'string' ? vf : vf.src, cues = (typeof vf === 'object' && vf.cues) || [];
       const v = document.createElement('video');
@@ -1077,7 +1077,7 @@
   function voiceStatus() {
     const all = KP.allSpeech ? KP.allSpeech() : [];
     const have = all.filter(x => window.AUDIO_FILES && window.AUDIO_FILES[x.key]).length;
-    if (have) return `🗣️ Giọng Trâu Con (Elio) đã có ${have}/${all.length} câu. Những câu chưa có sẽ đọc bằng giọng máy của thiết bị.`;
+    if (have) return `🗣️ Giọng Trâu Con đã có ${have}/${all.length} câu. Những câu chưa có sẽ đọc bằng giọng máy của thiết bị.`;
     return Voice.hasVi ? '🗣️ Đang dùng giọng đọc máy tiếng Việt của thiết bị (tạm thời, sẽ thay bằng giọng Trâu Con).' : '🗣️ Thiết bị này chưa có giọng đọc tiếng Việt, nên có thể không nghe được lời đọc. Chữ vẫn hiện đầy đủ trên màn hình.';
   }
   function showSettings() {
