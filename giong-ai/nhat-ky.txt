@@ -21,3 +21,11 @@ Lô 10 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.40  64  |  Sầu tư
 0.80  54  |  Năm tư
 0.95  Việt Nam có 54 dân tộc anh em. Lá cờ ở Lũng Cú rộng 54 mét vuông.  |  Việt Nam có 5 tư dân tộc anh em Lá cờ ở lũng cú rộng 5 tư mét vuông
+Lô 14 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+Lô 14 câu có đoạn cắt hỏng (sao: đoạn quá ngắn) – chia đôi để đọc lại
+Lô 7 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+Lô 7 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+Lô 7 câu có đoạn cắt hỏng (cỏ: đoạn quá ngắn) – chia đôi để đọc lại
+1.00  Mỗi lần các bạn chọn đúng chữ, lá cờ sẽ được kéo lên cao hơn. Cùng kéo cờ lên tới đỉnh nhé!  |  Mỗi lần các bạn chọn đúng chữ, lá cờ sẽ được kéo lên cao hơn. Cùng kéo cờ lên tới đỉnh nhé!
+1.00  Lá cờ đã tung bay trên đỉnh cột!  |  Lá cờ đã tung bay trên đỉnh cột.
+0.00  cờ  |  Go!
