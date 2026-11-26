@@ -76,3 +76,11 @@ Lô 4 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.50  Lâm Đồng  |  Lâm Đông
 0.78  Nước ở thác Bản Giốc chảy như thế nào?  |  Nước ở thác bàn dốc chảy như thế nào?
 0.67  Chảy trên cát  |  Chạy trên cát
+1.00  Đổ qua nhiều tầng đá  |  Đổ qua nhiều tầng đá
+0.50  Không chảy  |  không chạy.
+0.89  Khi hát Then, người Tày, Nùng chơi đàn gì?  |  Khi hát then, người tày, nùng, chơi đàn dí
+0.50  Đàn piano  |  vàng piano
+1.00  Đàn ghi-ta điện  |  đàn ghi ta điện
+1.00  Đàn tính  |  Đàn tính
+1.00  Chạm vào từng thứ để đếm, rồi chọn số đúng nhé!  |  Chạm vào từng thứ để đếm, rồi chọn số đúng nhé!
+1.00  Bạn đếm giỏi lắm!  |  Bạn đếm giỏi lắm!
