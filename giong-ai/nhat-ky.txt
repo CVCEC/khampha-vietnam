@@ -122,3 +122,6 @@ Lô 4 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 1.00  Câu chuyện bắt đầu thế nào nhỉ?  |  Câu chuyện bắt đầu thế nào nhỉ?
 1.00  Bạn đã kể lại câu chuyện thật hay!  |  Bạn đã kể lại câu chuyện thật hay.
 1.00  Bà cụ ăn xin đến lễ hội  |  bà cụ ăn xin đến lễ hội.
+0.88  Mẹ con bà goá cho bà cụ ăn  |  Mẹ con bà quá, cho bà cụ ăn
+1.00  Đêm đó nước dâng thành hồ  |  Đêm đó, nước dâng thành hồ.
+0.88  Hai mẹ con chèo thuyền cứu mọi người  |  Hai mẹ con trèo thuyền cứu mọi người.
