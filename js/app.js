@@ -733,17 +733,45 @@
      trò chơi của trạm ("tro-choi") và đố vui ("do-vui"). bai = mã trạm (ví dụ "lung-cu").
      Không tạo khoá localStorage mới; tiến trình vẫn nằm ở kpvn-tien-trinh-v1. */
   const HD_TRAM = ['tro-choi', 'do-vui'];
-  function ghiKetQua(s, hoatDong, diem, diemToiDa, t0, xong) {
+  /* Kết quả từng câu (từ 26-11-2026): cau = [{ ma, tu, dung, mang, loi }], tối đa 40 câu.
+     tu luôn là chữ ĐÍCH trong dữ liệu trạm (≤30 ký tự), không bao giờ là chữ người học chọn/gõ.
+     dung = đúng ngay lần đầu. Bộ mẫu cũ bỏ qua cau. */
+  function loaiLoi(dapAn, traLoi, macDinh) {
+    let l = null;
+    try { if (window.TTV && window.TTV.loaiLoi && traLoi != null) l = window.TTV.loaiLoi(String(dapAn), String(traLoi)); } catch (e) { }
+    return l || macDinh || 'khac';
+  }
+  function boCau() {
+    const ds = [], da = {};
+    return {
+      ds,
+      /* Chỉ lần đầu của mỗi câu được tính; các lần sau bỏ qua. */
+      them(c) {
+        if (!c || c.tu == null) return;
+        const tu = String(c.tu).normalize('NFC').trim().slice(0, 30), k = c.ma || tu;
+        if (!tu || da[k] || ds.length >= 40) return;
+        da[k] = 1;
+        const o = { tu, dung: !!c.dung, mang: c.mang };
+        if (c.ma) o.ma = c.ma;
+        if (!o.dung) o.loi = c.loi || 'khac';
+        ds.push(o);
+      }
+    };
+  }
+  function ghiKetQua(s, hoatDong, diem, diemToiDa, t0, xong, cau) {
     try {
       if (!window.TTV || !window.TTV.ghiKetQua) return;
       const tl = diemToiDa ? diem / diemToiDa : 1;
-      window.TTV.ghiKetQua({ bai: s.id, hoatDong, soTroChoi: HD_TRAM.length, diem, diemToiDa,
-        sao: tl >= 0.9 ? 3 : tl >= 0.6 ? 2 : tl > 0 ? 1 : 0, thoiGianGiay: Math.round((Date.now() - t0) / 1000), xong: xong !== false });
+      const kq = { bai: s.id, hoatDong, soTroChoi: HD_TRAM.length, diem, diemToiDa,
+        sao: tl >= 0.9 ? 3 : tl >= 0.6 ? 2 : tl > 0 ? 1 : 0, thoiGianGiay: Math.round((Date.now() - t0) / 1000), xong: xong !== false };
+      if (cau && cau.length) kq.cau = cau.slice(0, 40);
+      window.TTV.ghiKetQua(kq);
     } catch (e) { }
   }
 
   function stepGame(box, s) {
     const g = s.game, t0 = Date.now(); let daGhi = false;
+    const CAU = boCau();
     box.innerHTML = `<div class="step-h"><h2>🎮 ${esc(g.title)}</h2></div>`;
     box.appendChild(hintLine(g.intro));
     box.appendChild(KP.enBtn(s.en.game));
@@ -751,13 +779,15 @@
     const api = {
       say: (parts, opts) => Voice.say(parts, opts), speak: (parts, k, cb) => Voice.say(parts, { onend: cb }), stop: () => Voice.stop(),
       sfx: Snd, shuffle, rand, icon: KP.icon, esc, toast, PH,
+      /* Ghi một câu của trò chơi (chỉ lần thử đầu được tính). */
+      cau: c => CAU.them(c), loaiLoi,
       done() {
         if (!SV || SV.s !== s) return;
         Snd.star();
         const d = document.createElement('div'); d.className = 'g-done';
         d.innerHTML = `<span class="emo">🎉</span><b>${esc(g.doneMsg || 'Hoàn thành trò chơi!')}</b>`;
         root.appendChild(d); stepOk(); setTimeout(() => d.scrollIntoView({ behavior: 'smooth', block: 'center' }), 200);
-        if (!daGhi) { daGhi = true; ghiKetQua(s, 'tro-choi', 1, 1, t0); }
+        if (!daGhi) { daGhi = true; ghiKetQua(s, 'tro-choi', 1, 1, t0, true, CAU.ds); }
         Voice.say(g.doneMsg || pick(PH.praise));
       },
       alive: () => !!(SV && SV.s === s && SV.cur === 3 && document.body.contains(root))
@@ -789,7 +819,7 @@
 
   /* --- Bước 6: Đố vui (có gợi ý và giải thích) --- */
   function stepQuiz(box, s) {
-    const qs = s.quiz; let qi = 0; const res = []; let t0 = Date.now();
+    const qs = s.quiz; let qi = 0; const res = [], chon = []; let t0 = Date.now();
     const draw = () => {
       const q = qs[qi], key = s.keys[q.k];
       const order = shuffle(q.o.map((t, k) => ({ t, k })));
@@ -812,7 +842,7 @@
         const right = +b.dataset.k === q.a;
         $$('.opt', box).forEach(x => { x.disabled = true; if (+x.dataset.k === q.a) x.classList.add('right'); });
         if (!right) b.classList.add('wrong');
-        res[qi] = right;
+        res[qi] = right; chon[qi] = q.o[+b.dataset.k];
         right ? Snd.ok() : Snd.no();
         const p = pick(PH.praise);
         const w = $('.qwhy', box); w.classList.remove('hidden');
@@ -829,14 +859,20 @@
     };
     const finish = () => {
       const n = res.filter(Boolean).length, pass = n >= 2;
-      ghiKetQua(s, 'do-vui', n, qs.length, t0, pass);
+      /* Đố vui: đọc thẻ "Ghi nhớ" của trạm rồi chọn đáp án → doc-hieu. tu = đáp án đúng. */
+      const cau = qs.map((q, k) => {
+        const c = { ma: 'do-vui-' + (k + 1), tu: q.o[q.a], dung: res[k] === true, mang: 'doc-hieu' };
+        if (!c.dung) c.loi = loaiLoi(q.o[q.a], chon[k], 'nghia');
+        return c;
+      }).filter((c, k) => res[k] != null).map(c => Object.assign(c, { tu: String(c.tu).normalize('NFC').trim().slice(0, 30) }));
+      ghiKetQua(s, 'do-vui', n, qs.length, t0, pass, cau);
       box.innerHTML = `<div class="step-h"><h2>❓ Đố vui</h2></div><div class="card g-done"><span class="emo">${pass ? '🏆' : '💪'}</span>
         <b>Bạn trả lời đúng ${n}/${qs.length} câu!</b><p style="font-size:18px;font-weight:700">${pass ? esc(PH.quizPass) : 'Gần được rồi! Cần đúng ít nhất 2 câu. Mình xem lại phần Ghi nhớ rồi chơi lại nhé!'}</p>
         ${pass ? '' : '<div class="row" style="justify-content:center"><button class="btn ghost sm" id="qKeys">🔑 Xem lại Ghi nhớ</button><button class="btn peach" id="qAgain">↻ Chơi lại</button></div>'}</div>`;
       if (pass) { stepOk(); Snd.star(); Voice.say(PH.quizPass); }
       else {
         Voice.say(PH.quizFail);
-        $('#qAgain').onclick = () => { qi = 0; res.length = 0; t0 = Date.now(); draw(); };
+        $('#qAgain').onclick = () => { qi = 0; res.length = 0; chon.length = 0; t0 = Date.now(); draw(); };
         $('#qKeys').onclick = () => goStep(1);
       }
     };

@@ -13,6 +13,10 @@
   const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const wait = (api, ms, fn) => setTimeout(() => { if (api.alive()) fn(); }, ms);
+  /* Kết quả từng câu (26-11-2026): ghi câu ĐÍCH lấy từ dữ liệu trạm; app.js chỉ giữ lần thử đầu của mỗi câu.
+     C(api, ma, tu, dung, mang, loi) – loi chỉ dùng khi sai. LL đoán loại lỗi (dấu thanh, dấu chữ…) bằng bộ mẫu. */
+  const C = (api, ma, tu, dung, mang, loi) => { try { if (api.cau) api.cau({ ma, tu, dung, mang, loi }); } catch (e) { } };
+  const LL = (api, dapAn, traLoi, macDinh) => api.loaiLoi ? api.loaiLoi(dapAn, traLoi, macDinh) : macDinh;
 
   /* ---------- CSS riêng cho trò chơi ---------- */
   const css = `
@@ -167,6 +171,7 @@
       const M = mkMsg(right);
       H.set(`${PH.whichWord} (${k + 1}/${N})`, [PH.whichWord, r.say]);
       optButtons(right.querySelector('.opts-box'), r.options, (v, b) => {
+        C(api, null, r.say, v === r.say, 'tu-vung', LL(api, r.say, v, 'nghia'));
         if (v === r.say) {
           api.sfx.ok(); b.classList.add('right'); right.querySelectorAll('.opt').forEach(x => x.disabled = true);
           const p = pick(PH.praise); M.set(p + ' Chữ "' + r.say + '"', true); api.say([p, r.say]);
@@ -209,6 +214,7 @@
     st.querySelectorAll('.dir').forEach(b => b.onclick = () => {
       if (lock) return;
       const d = b.dataset.d, r = cfg.rounds[k];
+      C(api, 'huong-' + (k + 1), PH.dir[r.a], d === r.a, 'van-hoa', 'nghia');
       if (d === r.a) {
         lock = true; api.sfx.ok(); b.classList.add('right');
         needle.style.transform = `rotate(${ang[d]}deg)`;
@@ -267,6 +273,7 @@
     KP.shuffle(items.map((it, i) => ({ it, i }))).forEach(({ it }) => {
       const t = el('button', 'tile', (it.i ? KP.icon(it.i) : '') + `<span>${esc(it.t)}</span>`); t.type = 'button';
       t.onclick = () => {
+        if (k < items.length) C(api, null, items[k].t, it.t === items[k].t, 'van-hoa', 'trat-tu');
         if (it.t === items[k].t) {
           api.sfx.ok(); api.say(it.t); t.classList.add('used');
           slots.appendChild(el('span', 'tile', `<span class="n">${k + 1}</span>` + (it.i ? KP.icon(it.i) : '') + `<span>${esc(it.t)}</span>`));
@@ -296,6 +303,7 @@
     const check = () => {
       if (L == null || R == null) return;
       const lb = box.querySelector(`#mL [data-k="${L}"]`), rb = box.querySelector(`#mR [data-k="${R}"]`);
+      C(api, null, PH.street + ' ' + cfg.pairs[L].a, L === R, 'van-hoa', 'nghia');
       if (L === R) {
         api.sfx.ok(); [lb, rb].forEach(b => { b.classList.remove('sel'); b.classList.add('matched'); b.disabled = true; });
         const p = cfg.pairs[L]; M.set(`${pick(PH.praise)} ${PH.street} ${p.a} ${PH.sells} ${p.b}.`, true); api.say([PH.street + ' ' + p.a, PH.sells, p.b]);
@@ -337,6 +345,7 @@
       b.onclick = () => {
         if (busy || b.classList.contains('found')) return;
         b.classList.add('up');
+        C(api, null, targets[k].w, it === targets[k], 'tu-vung', 'nghia');
         if (it === targets[k]) {
           busy = true; api.sfx.ok(); b.classList.add('found'); M.set(`${pick(PH.praise)} ${PH.foundIt}`, true); api.say([it.w, PH.foundIt]);
           k++;
@@ -374,6 +383,7 @@
       KP.shuffle(r.options).forEach(o => {
         const b = el('button', 'cavebtn', (dune ? DUNE : CAVE) + `<span class="sign">${esc(o)}</span>`); b.type = 'button';
         b.onclick = () => {
+          C(api, null, r.say, o === r.say, 'tu-vung', LL(api, r.say, o, 'nghia'));
           if (o === r.say) {
             const p = pick(PH.praise);
             api.sfx.ok(); M.set(p, true); api.say([p, r.say]);
@@ -406,6 +416,7 @@
       b.setAttribute('aria-label', it.w);
       b.onclick = () => {
         if (b.classList.contains('found')) return;
+        C(api, null, targets[k].w, it === targets[k], 'tu-vung', 'nghia');
         if (it === targets[k]) {
           const p = pick(PH.praise);
           api.sfx.ok(); b.classList.add('found'); M.set(`${p} ${PH.foundIt}`, true); api.say([p, PH.thisIs, it.w]);
@@ -458,18 +469,19 @@
       root.insertBefore(box, root.querySelector('.g-msg'));
       H.set(PH.verseHint);
       const slots = box.querySelector('.slots'), tiles = box.querySelector('.tiles');
-      let k = 0;
+      let k = 0, sai = false;
       KP.shuffle(cfg.verse.map((w, i) => ({ w, i }))).forEach(({ w }) => {
         const t = el('button', 'tile', esc(w)); t.type = 'button';
         t.onclick = () => {
           if (w === cfg.verse[k]) {
             api.sfx.ok(); api.say(w); t.classList.add('used'); slots.appendChild(el('span', 'tile', esc(w))); k++;
             if (k === cfg.verse.length) {
+              C(api, 'ca-dao', line1, !sai, 'ngu-phap', 'trat-tu');
               M.set('', true);
               box.appendChild(el('div', 'bigeq', `${esc(line1)}<br><span style="font-size:.7em">${esc(cfg.verse2)}</span>`));
               api.say([line1, cfg.verse2], { onend: () => wait(api, 500, () => api.done()) });
             }
-          } else { api.sfx.no(); shake(t); M.set(PH.tryAgain, false); api.say(PH.tryAgain); }
+          } else { sai = true; api.sfx.no(); shake(t); M.set(PH.tryAgain, false); api.say(PH.tryAgain); }
         };
         tiles.appendChild(t);
       });
@@ -492,6 +504,7 @@
       const b = el('button', 'lantern dim', LANTERN(c.c)); b.type = 'button'; b.style.marginTop = (18 + (i % 3) * 22) + 'px'; b.setAttribute('aria-label', 'Đèn lồng ' + c.w);
       b.onclick = () => {
         if (b.classList.contains('lit')) return;
+        C(api, null, order[k].w, c === order[k], 'tu-vung', LL(api, order[k].w, c.w, 'nghia'));
         if (c === order[k]) {
           const p = pick(PH.praise);
           api.sfx.ok(); b.classList.remove('dim'); b.classList.add('lit'); M.set(`${p} ${PH.lantern} ${c.w}!`, true); api.say([p, c.w]);
@@ -563,6 +576,7 @@
       const [lon, lat] = KP.unproject(p.x, p.y), r = cfg.rounds[k];
       const d = Math.hypot((lon - r.pos[0]) * Math.cos(lat * Math.PI / 180), lat - r.pos[1]);
       const mk = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      C(api, 'ban-do-' + (k + 1), r.say, d <= r.r, 'van-hoa', 'khac');
       if (d <= r.r) {
         lock = true; api.sfx.ok();
         const [tx, ty] = KP.project(r.pos[0], r.pos[1]);
@@ -593,6 +607,7 @@
         box.innerHTML = `<div class="card"><div class="quiz-q">"${esc(han)}" trong "Hoàng Sa" ${esc(PH.meaningQ)}</div><div class="ob"></div></div>`;
         H.set(q, [q]);
         optButtons(box.querySelector('.ob'), [viet].concat(KP.shuffle(others).slice(0, 2)), (v, b) => {
+          C(api, 'han-viet-' + (i + 1), han + ' – ' + viet, v === viet, 'tu-vung', 'nghia');
           if (v === viet) {
             api.sfx.ok(); b.classList.add('right'); api.say(`${han} ${PH.meaningIs} ${viet}.`);
             i++; if (i < cfg.meaning.length) wait(api, 1700, one);
@@ -629,6 +644,7 @@
       H.set(`${PH.countAsk} (${k + 1}/${cfg.rounds.length})`, [PH.countAsk]);
       const wrongs = KP.shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].filter(x => x !== r.n && Math.abs(x - r.n) <= 3)).slice(0, 2);
       optButtons(opts, [r.n].concat(wrongs).map(x => NUM[x]), (v, b) => {
+        C(api, 'dem-' + (k + 1), NUM[r.n], v === NUM[r.n], 'tu-vung', 'nghia');
         if (v === NUM[r.n]) {
           const p = pick(PH.praise);
           api.sfx.ok(); b.classList.add('right'); opts.querySelectorAll('.opt').forEach(x => x.disabled = true);
@@ -696,7 +712,7 @@
       right.innerHTML = `<div class="card" style="background:#FFFBEF"><b>${cfg.visual === 'vanmieu' ? '📜 Câu' : '✉️ Lá thư'} ${si + 1}</b><div class="slots" style="margin-top:8px"></div><div class="tiles"></div></div>`;
       H.set(PH.sentenceHint);
       const slots = right.querySelector('.slots'), tiles = right.querySelector('.tiles');
-      let k = 0;
+      let k = 0, sai = false;
       KP.shuffle(words.map((w, i) => ({ w, i }))).forEach(({ w }) => {
         const t = el('button', 'tile', esc(w)); t.type = 'button';
         t.onclick = () => {
@@ -704,13 +720,14 @@
             api.sfx.ok(); api.say(w); t.classList.add('used'); slots.appendChild(el('span', 'tile', esc(w))); k++;
             if (k === words.length) {
               const sen = words.join(' ') + '!';
+              C(api, 'xep-cau-' + (si + 1), words.join(' '), !sai, 'ngu-phap', 'trat-tu');
               M.set(sen, true); si++; vis.innerHTML = vf(si);
               let moved = false;
               const go = () => { if (moved) return; moved = true; if (si < cfg.sentences.length) { M.set(''); one(); } else api.done(); };
               api.say(sen, { onend: () => wait(api, 600, go) });
               wait(api, 9000, go);
             }
-          } else { api.sfx.no(); shake(t); M.set(PH.tryAgain, false); api.say(PH.tryAgain); }
+          } else { sai = true; api.sfx.no(); shake(t); M.set(PH.tryAgain, false); api.say(PH.tryAgain); }
         };
         tiles.appendChild(t);
       });
@@ -786,6 +803,7 @@
         const b = el('button', 'it emo', it.e); b.type = 'button'; b.style.left = P[i][0] + '%'; b.style.top = P[i][1] + '%';
         if (it.e === '⬢') { b.style.color = '#6B5B4A'; b.style.fontSize = 'clamp(42px,8vw,62px)'; }
         b.onclick = () => {
+          if (!(it.t && b.classList.contains('got'))) C(api, 'nhat-' + (k + 1), r.say, it.t, 'nghe-hieu', 'nghia');
           if (it.t) {
             if (b.classList.contains('got')) return;
             b.classList.add('got'); got++; upd(); api.sfx.ok(); api.say(NUM[got] || String(got));
@@ -822,6 +840,7 @@
       card.querySelectorAll('.tray .bill').forEach(b => b.onclick = () => { paid.splice(+b.dataset.i, 1); draw(); });
       card.querySelector('#clrBtn').onclick = () => { paid = []; draw(); };
       card.querySelector('#payBtn').onclick = () => {
+        C(api, null, fmt(it.price) + ' đồng', total === it.price, 'nghe-hieu', 'khac');
         if (total === it.price) {
           const p = pick(PH.praise);
           api.sfx.ok(); M.set(`${p} ${PH.payOk}`, true); api.say([p, PH.payOk]);
@@ -849,6 +868,7 @@
       const b = el('button', 'ghe', GHE + `<span class="fruit emo">${it.i}</span>`); b.type = 'button'; b.setAttribute('aria-label', 'Ghe bán ' + it.w);
       b.onclick = () => {
         if (lock) return;
+        C(api, null, asks[k].w, it === asks[k], 'tu-vung', 'nghia');
         if (it === asks[k]) {
           const p = pick(PH.praise);
           lock = true; api.sfx.ok(); b.classList.add('right');

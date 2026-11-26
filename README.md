@@ -61,6 +61,12 @@ Cả **31 trạm** đã có video Trâu Con 3D trong thư mục `video/` (mỗi 
 - **Giọng máy (ngoại lệ tạm thời, xem `CLAUDE.md`):** khi chưa có tệp giọng cho một câu, trang vẫn đọc bằng giọng máy của thiết bị. Robot giọng đọc AI tạo dần các tệp (mục 3). Chỉ gỡ giọng máy khi đã đủ tệp.
 - **Giọng máy qua bộ mẫu và ghi kết quả học (17-11-2026):** câu chưa có tệp giọng được đọc qua `TTV.phat({ chu })` của bộ mẫu (trang không tự gọi giọng máy); xong trò chơi hoặc đố vui của một trạm, trang gọi `TTV.ghiKetQua` (bai = mã trạm, hoatDong `tro-choi` / `do-vui`) để cổng ghi vào tài khoản.
 
+### Kết quả từng câu (26-11-2026)
+Cùng lần gọi `TTV.ghiKetQua`, trang gửi thêm `cau: [{ ma, tu, dung, mang, loi }]` (tối đa 40 câu; bộ mẫu cũ bỏ qua). `tu` luôn là chữ **đích** trong dữ liệu trạm (≤30 ký tự), không bao giờ là chữ người học chọn; `dung` = đúng ngay lần thử đầu (js/app.js `boCau()` chỉ giữ lần đầu của mỗi câu). Không thêm khoá localStorage, không đổi điểm/sao.
+- Đố vui (`do-vui`): mỗi câu hỏi → `doc-hieu` (đọc thẻ Ghi nhớ rồi chọn), `tu` = đáp án đúng, sai → `TTV.loaiLoi` hoặc `nghia`.
+- Trò chơi (`tro-choi`, js/games.js hàm `C(...)`): kéo cờ/đèn lồng/chọn đường/tìm vật/ghe bẹo/đếm/âm Hán Việt → `tu-vung`; xếp thứ tự (truyện, trồng lúa, bánh chưng…), ghép phố, la bàn, bản đồ → `van-hoa`; xếp câu, câu ca dao nón bài thơ → `ngu-phap` (lỗi `trat-tu`); nhặt đồ, trả tiền chợ Bến Thành → `nghe-hieu`. Loại lỗi: `trat-tu` (xếp thứ tự), `dau-thanh`/`dau-chu` khi `TTV.loaiLoi` nhận ra, còn lại `nghia` hoặc `khac`.
+- Thả thuyền/rùa, gõ chiêng, trồng đước không có câu hỏi nên không gửi `cau`.
+
 ## 6. Sửa hoặc thêm nội dung
 
 Toàn bộ chữ của 31 trạm nằm trong **`js/stops.js`**. Bạn có thể sửa trực tiếp trên GitHub (biểu tượng bút chì) rồi Commit. Câu đã sửa cần cập nhật trong `giong-ai/can-doc.tsv` để robot đọc lại. Muốn thêm trạm, chép một khối trạm có sẵn rồi đổi nội dung.
