@@ -11,3 +11,13 @@ Lô 10 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 1.00  Miền Bắc  |  miền Bắc.
 0.00  Miền Trung  |  miễn chung
 1.00  Miền Nam  |  miền nam
+1.00  Cột cờ Lũng Cú ở miền Bắc, nơi địa đầu Tổ quốc.  |  Cột Cờ Lũng Cú ở miền Bắc, nơi địa đầu tổ quốc.
+1.00  Lá cờ Việt Nam có màu gì?  |  Lá cờ Việt Nam có màu gì?
+0.75  Nền xanh, sao trắng  |  Nền xanh sao chẳng?
+0.00  Nền đỏ, sao vàng  |  Nên đó, sau vắng
+1.00  Nền vàng, sao đỏ  |  Nền vàng, sao đỏ
+1.00  Việt Nam có bao nhiêu dân tộc anh em?  |  Việt Nam có bao nhiêu dân tộc anh em?
+1.00  45  |  45
+0.40  64  |  Sầu tư
+0.80  54  |  Năm tư
+0.95  Việt Nam có 54 dân tộc anh em. Lá cờ ở Lũng Cú rộng 54 mét vuông.  |  Việt Nam có 5 tư dân tộc anh em Lá cờ ở lũng cú rộng 5 tư mét vuông
