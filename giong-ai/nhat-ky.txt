@@ -42,3 +42,5 @@ Lô 7 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 Lô 4 câu có 4 câu lệch nhiều – có thể cắt sai, chia đôi để đọc lại
 1.00  đò  |  Đò
 1.00  vàng  |  Vàng
+0.00  vang  |  Vâng!
+0.00  váng  |  Vẳng
