@@ -44,3 +44,22 @@ Lô 4 câu có 4 câu lệch nhiều – có thể cắt sai, chia đôi để �
 1.00  vàng  |  Vàng
 0.00  vang  |  Vâng!
 0.00  váng  |  Vẳng
+Lô 18 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+0.95  Từ Lũng Cú, Trâu Con đi xe khách sang phía Đông, tới Cao Bằng có núi non hùng vĩ.  |  Từ Lũng Cú, châu con đi xe khách sang phía đông tới cao bằng có núi non hùng vĩ.
+0.89  Các bạn có nghe thấy tiếng nước reo không?  |  Các bạn có nghe thấy tiếng nước zeo không?
+0.88  Đây là thác Bản Giốc ở Cao Bằng, một trong những thác nước đẹp nhất Việt Nam.  |  Đây là thác bản dốc ở Cao Băng, một trong những thác nước đẹp nhất Việt Nam.
+1.00  Nước đổ trắng xoá qua nhiều tầng đá.  |  Nước đổ trắng xóa qua nhiều tầng đá.
+0.94  Ở đây có người Tày, người Nùng sinh sống, họ hát Then và chơi đàn tính rất hay.  |  Ở đây có người tày, người nùng sinh sống, họ hát ten và chơi đàn tính rất hay.
+0.82  Thác Bản Giốc ở tỉnh Cao Bằng, miền Bắc Việt Nam.  |  Thác bản dốc ở tỉnh Cao Băng, miền Bắc Việt Nam.
+0.80  Nước ở thác Bản Giốc đổ qua nhiều tầng đá.  |  nước ở thác bàn dốc đổ qua nhiều tầng đá.
+0.90  Người Tày, người Nùng hát Then và chơi đàn tính.  |  người tay, người nùng hát then và chơi đàn tính.
+0.93  Hôm nay, mình đưa các bạn đến thác Bản Giốc ở tỉnh Cao Bằng.  |  Hôm nay, mình đưa các bạn đến thác bản dốc ở tỉnh Cao Bằng.
+1.00  thác nước  |  Thác nước
+1.00  dòng sông  |  dòng sông.
+0.50  hạt dẻ  |  Hạt dạy
+1.00  cây đàn  |  cây đàn
+1.00  Thác nước chảy ầm ầm.  |  Thác nước chảy ầm ầm
+1.00  Dòng sông chảy qua thác.  |  dòng sông chảy qua thác.
+0.80  Hạt dẻ nướng thơm bùi.  |  Hạt rẻ nướng thơm bùi
+1.00  Bà chơi cây đàn tính.  |  bà chơi cây đàn tính
+0.75  Hạt dẻ Trùng Khánh  |  Hạt dẻ trung khánh
