@@ -32,3 +32,5 @@ Lô 7 câu có đoạn cắt hỏng (cỏ: đoạn quá ngắn) – chia đôi �
 Lô 4 câu có 4 câu lệch nhiều – có thể cắt sai, chia đôi để đọc lại
 0.00  cỏ  |  Cá
 0.00  cô  |  Cứu
+1.00  sao  |  sao
+1.00  sáo  |  sáo

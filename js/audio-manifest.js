@@ -68,6 +68,8 @@ window.AUDIO_FILES = {
 "v6feb36d2": "audio/kore/v6feb36d2.mp3",
 "v74007498": "audio/kore/v74007498.mp3",
 "v7957a0b1": "audio/kore/v7957a0b1.mp3",
+"v79bd21d9": "audio/kore/v79bd21d9.mp3",
+"v7afa5659": "audio/kore/v7afa5659.mp3",
 "v7bb0d1e2": "audio/kore/v7bb0d1e2.mp3",
 "v7dd53809": "audio/kore/v7dd53809.mp3",
 "v7f15a9bc": "audio/kore/v7f15a9bc.mp3",
