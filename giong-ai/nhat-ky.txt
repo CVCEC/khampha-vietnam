@@ -102,3 +102,23 @@ Lô 4 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.83  Bà cụ chống gậy đi chậm.  |  bà cụ chống gợi đi chậm.
 1.00  Giữa hồ có hòn đảo nhỏ.  |  Giữa hồ có hòn đảo nhỏ
 1.00  Cá nướng hồ Ba Bể  |  Cá nướng Hồ Ba Bể
+1.00  Cá bắt ở hồ được nướng trên than hồng, thơm lừng.  |  Cá bắt ở hồ được nướng trên than hồng, thơm lừng.
+0.90  Truyện kể rằng nhờ tốt bụng giúp bà cụ ăn xin, hai mẹ con bà goá được cứu khi nước dâng thành hồ, rồi họ chèo thuyền đi cứu mọi người.  |  Chuyện kể rằng nhờ tốt bụng giúp bà cụ ăn xin, hai mẹ con bà quá được cứu khi nước dâng thành hồ, rồi họ treo thuyền đi cứu mọi người.
+0.83  Hồ Ba Bể là hồ gì?  |  Hồ 3B, là hồ gì?
+1.00  Hồ nước ngọt tự nhiên lớn nhất Việt Nam  |  Hồ nước ngọt tự nhiên lớn nhất Việt Nam.
+1.00  Hồ nước mặn  |  Hồ nước mặn
+0.50  Hồ bơi  |  Hô bơi!
+0.50  Thuyền độc mộc làm từ gì?  |  Thuyền độc mục làm tự di
+0.00  Nhựa  |  Nhỡ
+1.00  Một thân cây  |  Một thân cây
+0.00  Sắt  |  Sao?
+0.80  Thuyền độc mộc được khoét từ một thân cây to.  |  Thuyền độc mục được khóét từ một thân cây to.
+0.82  Truyện Sự tích hồ Ba Bể dạy chúng ta điều gì?  |  Chuyện sự tích Hồ Ba Bể sẽ chúng ta điều gì?
+1.00  Biết giúp đỡ người khó khăn  |  biết giúp đỡ người khó khăn.
+0.33  Ăn thật nhiều  |  Anh thích nhiều
+1.00  Ngủ thật muộn  |  Ngủ thật muộn
+0.85  Hai mẹ con bà goá tốt bụng giúp người nghèo nên được cứu.  |  Hai mẹ con bảo quá tốt bụng, giúp người nghèo nên được cứu.
+1.00  Chạm vào các tranh theo đúng thứ tự câu chuyện nhé!  |  chạm vào các tranh theo đúng thứ tự câu chuyện nhé.
+1.00  Câu chuyện bắt đầu thế nào nhỉ?  |  Câu chuyện bắt đầu thế nào nhỉ?
+1.00  Bạn đã kể lại câu chuyện thật hay!  |  Bạn đã kể lại câu chuyện thật hay.
+1.00  Bà cụ ăn xin đến lễ hội  |  bà cụ ăn xin đến lễ hội.
