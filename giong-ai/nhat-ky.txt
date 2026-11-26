@@ -63,3 +63,12 @@ Lô 18 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.80  Hạt dẻ nướng thơm bùi.  |  Hạt rẻ nướng thơm bùi
 1.00  Bà chơi cây đàn tính.  |  bà chơi cây đàn tính
 0.75  Hạt dẻ Trùng Khánh  |  Hạt dẻ trung khánh
+Lô 16 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper – không được
+Lô 16 câu không cắt được, chia đôi để đọc lại
+Lô 8 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper – không được
+Lô 8 câu không cắt được, chia đôi để đọc lại
+Lô 4 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+0.94  Hạt dẻ Trùng Khánh ở Cao Bằng to, bùi và thơm, nướng lên ăn rất ngon.  |  Hạt sẽ trùng khánh ở cao bằng, to, bùi và thơm, nướng lên ăn rất ngon.
+0.91  Hát Then của người Tày, Nùng, Thái đã được UNESCO ghi danh là di sản văn hoá phi vật thể của nhân loại.  |  Hát ten của người Tây, Nùng, Thái đã được UNESCO ghi danh là di sản văn hóa phi vật thể của nhân loại.
+0.50  Thác Bản Giốc ở tỉnh nào?  |  Thác bản dốc ở Tình Nao
+1.00  Cao Bằng  |  cao bằng
