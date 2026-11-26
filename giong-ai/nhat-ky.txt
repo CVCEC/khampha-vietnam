@@ -72,3 +72,7 @@ Lô 4 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.91  Hát Then của người Tày, Nùng, Thái đã được UNESCO ghi danh là di sản văn hoá phi vật thể của nhân loại.  |  Hát ten của người Tây, Nùng, Thái đã được UNESCO ghi danh là di sản văn hóa phi vật thể của nhân loại.
 0.50  Thác Bản Giốc ở tỉnh nào?  |  Thác bản dốc ở Tình Nao
 1.00  Cao Bằng  |  cao bằng
+0.00  Cà Mau  |  Cảm ơn!
+0.50  Lâm Đồng  |  Lâm Đông
+0.78  Nước ở thác Bản Giốc chảy như thế nào?  |  Nước ở thác bàn dốc chảy như thế nào?
+0.67  Chảy trên cát  |  Chạy trên cát
