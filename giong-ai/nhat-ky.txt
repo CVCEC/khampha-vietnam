@@ -125,3 +125,22 @@ Lô 4 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.88  Mẹ con bà goá cho bà cụ ăn  |  Mẹ con bà quá, cho bà cụ ăn
 1.00  Đêm đó nước dâng thành hồ  |  Đêm đó, nước dâng thành hồ.
 0.88  Hai mẹ con chèo thuyền cứu mọi người  |  Hai mẹ con trèo thuyền cứu mọi người.
+0.80  Từ hồ Ba Bể, Trâu Con đi xe khách sang Lào Cai, rồi lên Sa Pa mờ sương.  |  Từ Hồ Ba Bể, châu con đi xe khách sang Lào Cai, rồi lên Sapa mờ xương.
+0.57  Sa Pa đây rồi!  |  Sapa đây rồi!
+0.86  Ở đây có đỉnh Fansipan cao hơn 3.100 mét, được gọi là "nóc nhà Đông Dương".  |  Ở đây có đỉnh Phan Xipan cao hơn 3.100m, được gọi là Nóc Nhà Đông Dương.
+0.67  Các bạn nhìn những thửa ruộng bậc thang kìa.  |  Các bạn nhìn những thử dụng bậc thang kia
+1.00  Chúng giống như những bậc cầu thang khổng lồ trên sườn núi!  |  Chúng giống như những bậc cầu thang khổng lồ trên sườn núi.
+0.75  Đỉnh Fansipan ở Sa Pa được gọi là "nóc nhà Đông Dương".  |  Đỉnh Phan Xipan ở Sapa được gọi là Nóc Nhà Đông Dương.
+1.00  Ruộng bậc thang dùng để trồng lúa.  |  ruộng bậc thang dùng để trồng lúa.
+0.73  Sa Pa thuộc tỉnh Lào Cai.  |  Sapa thuộc tỉnh Lào Cai
+0.81  Hôm nay, mình đưa các bạn đến Sa Pa và đỉnh Fansipan ở tỉnh Lào Cai.  |  Hôm nay, mình đưa các bạn đến Sapa và đỉnh Phan Xipan ở tỉnh Lào Cai.
+1.00  ruộng bậc thang  |  ruộng bậc thang.
+0.50  đám mây  |  Đảm mây
+1.00  cây lúa  |  cây lúa
+0.00  thổ cẩm  |  TÔ CÂM
+1.00  Ruộng bậc thang như cầu thang khổng lồ.  |  ruộng bậc thang như cầu thang khổng lồ.
+1.00  Đám mây trắng bay trên núi.  |  Đám mây trắng bay trên núi
+1.00  Cây lúa cho ta hạt gạo.  |  cây lúa cho ta hạt gạo
+0.86  Cô dệt vải thổ cẩm nhiều màu.  |  Cô dệt vải thổ cẩm nhiều mâu.
+0.25  Cá hồi Sa Pa  |  Cả hồi sáp bá
+0.89  Cá hồi được nuôi trong dòng suối nước lạnh trên núi cao Sa Pa.  |  cá hồi được nuôi trong dòng suối nước lạnh trên núi Cao Sapa.
