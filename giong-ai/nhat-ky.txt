@@ -165,3 +165,5 @@ Lô 20 câu – Gemini không trả tiếng: không có tiếng trả về: {"ca
 0.50  Cấy lúa  |  Gầy lúa?
 0.33  Lúa chín vàng  |  LỒ CHÍN VÀN
 0.00  Gặt lúa  |  Gặp lùa
+Lô 17 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+Lô 17 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
