@@ -1,1 +1,13 @@
-Lô 20 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+Lô 20 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper – không được
+Lô 20 câu không cắt được, chia đôi để đọc lại
+Lô 10 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+0.83  Lá cờ có ngôi sao vàng.  |  Lã cờ, có ngôi sao vàng
+0.83  Lá cờ có nền màu đỏ.  |  Lá cờ có nên màu đỏ
+1.00  Cột cờ ở trên ngọn núi.  |  Cột cờ ở trên ngọn núi
+0.00  Mèn mén  |  Mênh mênh
+0.95  Mèn mén là món ăn làm từ bột ngô hấp chín của người H'Mông ở vùng núi đá.  |  Mèn mén là món ăn làm từ bột ngô hấp chín của người Hơ Mông ở vùng núi đá.
+0.92  Lá cờ trên Cột cờ Lũng Cú rộng 54 mét vuông, tượng trưng cho 54 dân tộc anh em Việt Nam.  |  Lá cờ trên cột cờ lũng cú rộng 54m2 tượng trưng cho 54 dân tộc anh em Việt Nam.
+0.90  Cột cờ Lũng Cú ở miền nào của Việt Nam?  |  Cột cơ lũng cú ở miền nào của Việt Nam?
+1.00  Miền Bắc  |  miền Bắc.
+0.00  Miền Trung  |  miễn chung
+1.00  Miền Nam  |  miền nam
