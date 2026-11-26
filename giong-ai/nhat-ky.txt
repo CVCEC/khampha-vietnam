@@ -84,3 +84,21 @@ Lô 4 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 1.00  Đàn tính  |  Đàn tính
 1.00  Chạm vào từng thứ để đếm, rồi chọn số đúng nhé!  |  Chạm vào từng thứ để đếm, rồi chọn số đúng nhé!
 1.00  Bạn đếm giỏi lắm!  |  Bạn đếm giỏi lắm!
+0.93  Trâu Con đi xe khách qua những cánh rừng xanh để tới hồ Ba Bể.  |  Châu con đi xe khách qua những cánh rừng xanh để tới Hồ Ba Bể.
+1.00  Mình đang ngồi thuyền độc mộc trên hồ Ba Bể – hồ nước ngọt tự nhiên lớn nhất Việt Nam!  |  Mình đang ngồi thuyền độc mộc trên hồ Ba Bể, hồ nước ngọt tự nhiên lớn nhất Việt Nam.
+1.00  Hồ có ba nhánh nối với nhau, nên gọi là Ba Bể.  |  Hồ có ba nhánh nối với nhau nên gọi là ba bể.
+0.91  Ở đây có truyện cổ tích "Sự tích hồ Ba Bể".  |  Ở đây có chuyện cổ tích, sự tích hồ ba bể.
+0.88  Truyện kể về hai mẹ con bà goá tốt bụng đã giúp một bà cụ ăn xin.  |  Chuyện kể về hai mẹ con bà quá tốt bụng đã giúp một bà cụ ăn xin.
+0.92  Hồ Ba Bể là hồ nước ngọt tự nhiên lớn nhất Việt Nam.  |  Hồ Ba Bể là hổ nước ngọt tự nhiên lớn nhất Việt Nam.
+0.91  Người Tày đi thuyền độc mộc, làm từ một thân cây.  |  Người tài đi thuyền độc mộc làm từ một thân cây.
+0.93  Truyện Sự tích hồ Ba Bể dạy chúng ta biết giúp đỡ người khó khăn.  |  chuyện sự tích hồ ba bể dạy chúng ta biết giúp đỡ người khó khăn.
+1.00  Hôm nay, mình đưa các bạn đến hồ Ba Bể ở tỉnh Thái Nguyên.  |  Hôm nay, mình đưa các bạn đến Hồ Ba Bể ở tỉnh Thái Nguyên.
+1.00  hồ nước  |  Hồ nước
+0.33  thuyền độc mộc  |  Thuyền đục mục
+1.00  bà cụ  |  bà cụ
+0.50  hòn đảo  |  Hòn đạo
+0.80  Hồ Ba Bể rất rộng.  |  Hồ 3B rất rộng
+1.00  Thuyền độc mộc làm từ một thân cây.  |  thuyền độc mộc làm từ một thân cây.
+0.83  Bà cụ chống gậy đi chậm.  |  bà cụ chống gợi đi chậm.
+1.00  Giữa hồ có hòn đảo nhỏ.  |  Giữa hồ có hòn đảo nhỏ
+1.00  Cá nướng hồ Ba Bể  |  Cá nướng Hồ Ba Bể
