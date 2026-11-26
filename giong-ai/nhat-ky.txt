@@ -144,3 +144,24 @@ Lô 4 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.86  Cô dệt vải thổ cẩm nhiều màu.  |  Cô dệt vải thổ cẩm nhiều mâu.
 0.25  Cá hồi Sa Pa  |  Cả hồi sáp bá
 0.89  Cá hồi được nuôi trong dòng suối nước lạnh trên núi cao Sa Pa.  |  cá hồi được nuôi trong dòng suối nước lạnh trên núi Cao Sapa.
+Lô 20 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+0.78  Người H'Mông và người Dao đỏ ở Sa Pa dệt vải thổ cẩm với hoa văn nhiều màu rất đẹp.  |  Người hơ mông và người dao đỏ ở Sapa dệt vài thổ cầm với hoa văn nhiều màu rất đẹp.
+0.77  Đỉnh Fansipan được gọi là gì?  |  Đỉnh fancy pang được gọi là gì?
+1.00  Nóc nhà Đông Dương  |  Nóc nhà Đông Dương
+1.00  Nóc nhà thế giới  |  Nóc nhà thế giới
+0.67  Đỉnh mây trắng  |  Định mây trắng
+0.87  Fansipan rất cao nên được gọi là nóc nhà Đông Dương.  |  Phan Xipang rất cao nên được gọi là Nóc nhà Đông Dương.
+0.71  Ruộng bậc thang dùng để trồng gì?  |  ruộng bậc thang dùng để trông di.
+1.00  Cà phê  |  Cà phê
+0.00  Lúa  |  Lùa?
+0.00  Dừa  |  Dùa!
+1.00  Người dân trồng lúa trên ruộng bậc thang.  |  người dân trồng lúa trên ruộng bậc thang.
+0.44  Sa Pa thuộc tỉnh nào?  |  Sapa thuộc tỉnh náo
+0.50  Lào Cai  |  Lào gái
+1.00  Cây lúa lớn lên như thế nào? Chạm vào các bước theo đúng thứ tự nhé!  |  cây lúa lớn lên như thế nào, chạm vào các bước theo đúng thứ tự nhé.
+0.90  Cây lúa lớn lên thế nào? Chọn bước đầu tiên!  |  Cầy lúa lớn lên thế nào? Chọn bước đầu tiên.
+0.75  Ruộng bậc thang đã vàng óng lúa chín!  |  ruộng bực thang đã vàng ống lúa chín.
+0.00  Gieo mạ  |  ZÈU MÁ
+0.50  Cấy lúa  |  Gầy lúa?
+0.33  Lúa chín vàng  |  LỒ CHÍN VÀN
+0.00  Gặt lúa  |  Gặp lùa
