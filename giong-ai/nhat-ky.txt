@@ -43,3 +43,23 @@ Lô 5 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 1.00  Mặt trời lặn ở hướng nào?  |  Mặt trời lặn, ở hướng nào?
 1.00  Chạm vào hướng Nam  |  Chạm vào hướng Nam
 0.78  A Pa Chải ở phía nào của Việt Nam?  |  A ba chảy ở phía nào của Việt Nam?
+Lô 19 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+0.81  Từ A Pa Chải, Trâu Con đi xe khách về cao nguyên Mộc Châu mát mẻ.  |  Từ A3 trải, châu con đi xe khách về cao nguyên mộc châu mát mẻ.
+0.89  Chào mừng các bạn đến cao nguyên Mộc Châu!  |  Chào mừng các bạn đến Công Nguyên Mộc Châu!
+1.00  Ở đây có những đồi chè xanh mướt, có cả đồi chè hình trái tim.  |  Ở đây có những đồi chè xanh mướt, có cả đồi chè hình trái tim.
+0.89  Mùa xuân, hoa mận nở trắng núi đồi.  |  Mùa xuân, hoa mận nở trắng núi đồi mộc trâu
+1.00  Mộc Châu còn nổi tiếng với những đàn bò sữa và sữa tươi thơm ngon.  |  Mộc châu còn nổi tiếng với những đàn bò sữa và sữa tươi thơm ngon.
+0.92  Mộc Châu có những đồi chè xanh, có đồi chè hình trái tim.  |  Mộc trâu có những đồi chè xanh, có đồi chè hình trái tim
+0.90  Mộc Châu nổi tiếng với bò sữa và sữa tươi.  |  Mộc trâu nổi tiếng với bò sữa và sữa tươi.
+0.90  Mùa xuân, hoa mận nở trắng núi đồi Mộc Châu.  |  Mùa xuân, hoa mận nở trắng núi đồi mộc trâu
+1.00  Hôm nay, mình đưa các bạn đến cao nguyên Mộc Châu ở tỉnh Sơn La.  |  Hôm nay, mình đưa các bạn đến Cao Nguyên Mộc Châu ở tỉnh Sơn La.
+0.00  đồi chè  |  đôi che
+1.00  con bò  |  con bò
+0.00  sữa  |  SỤ
+0.50  hoa mận  |  Hóa mận
+0.75  Đồi chè xanh mướt.  |  Đồi chè xanh bướt
+1.00  Con bò cho ta sữa.  |  Con bò cho ta sữa.
+1.00  Em uống sữa mỗi sáng.  |  Em uống sữa mỗi sáng.
+0.86  Hoa mận nở trắng núi đồi.  |  Hoa mận nở trắng núi đồi mộc châu
+1.00  Sữa và bánh sữa Mộc Châu  |  Sữa và bánh sữa mộc châu
+0.93  Sữa bò tươi Mộc Châu béo thơm, còn được làm thành bánh sữa ngọt ngào.  |  Sữa bò tươi mộc trâu béo thơm còn được làm thành bánh sữa ngọt ngào
