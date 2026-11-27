@@ -128,3 +128,13 @@ Lô 19 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 1.00  Thêm thịt  |  thêm thịt
 1.00  Gói và buộc lạt  |  gói và buộc lạt
 1.00  Luộc bánh  |  luộc bánh
+Lô 17 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+Lô 8 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+0.94  Trâu Con về tới Thủ đô, rồi ngồi xích lô dạo quanh phố cổ Hà Nội.  |  châu con về tới thủ đô, rồi ngồi xích lô dạo quanh phố cổ Hà Nội.
+1.00  Chào mừng các bạn tới Hà Nội – Thủ đô của Việt Nam!  |  Chào mừng các bạn tới Hà Nội, thủ đô của Việt Nam.
+0.90  Đây là Hồ Gươm, còn gọi là hồ Hoàn Kiếm.  |  Đây là Hồ Gơm, còn gọi là Hồ Hoàn Kiếm.
+0.95  Truyền thuyết kể rằng vua Lê Lợi đã trả lại gươm thần cho Rùa Vàng ở chính hồ này.  |  Truyền thuyết kể rằng vua Lê Lợi đã trả lại gâm thần cho rùa vàng ở chính hồ này.
+1.00  Kia là cầu Thê Húc màu đỏ và Tháp Rùa giữa hồ!  |  kia là cầu thê húc màu đỏ và tháp rùa giữa hồ.
+1.00  Hà Nội là Thủ đô của Việt Nam.  |  Hà Nội là thủ đô của Việt Nam.
+1.00  Hồ Gươm còn gọi là hồ Hoàn Kiếm, nơi vua Lê Lợi trả gươm cho Rùa Vàng.  |  Hồ Gươm còn gọi là Hồ Hoàn Kiếm, nơi vua lê lợi trả gươm cho rùa vàng.
+1.00  Phố cổ Hà Nội có 36 phố phường, nhiều phố tên là "Hàng…".  |  Phố cổ Hà Nội có 36 phố phường. Nhiều phố tên là Hàng
