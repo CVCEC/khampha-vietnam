@@ -63,3 +63,22 @@ Lô 19 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.86  Hoa mận nở trắng núi đồi.  |  Hoa mận nở trắng núi đồi mộc châu
 1.00  Sữa và bánh sữa Mộc Châu  |  Sữa và bánh sữa mộc châu
 0.93  Sữa bò tươi Mộc Châu béo thơm, còn được làm thành bánh sữa ngọt ngào.  |  Sữa bò tươi mộc trâu béo thơm còn được làm thành bánh sữa ngọt ngào
+Lô 18 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+0.96  Ở Mộc Châu có người Thái, người H'Mông sinh sống. Mùa xuân, hoa mận và hoa cải nở trắng cả cao nguyên.  |  Ở Mộc Châu, có người thái, người hông mông sinh sống Mùa xuân, hoa mận và hoa cải nở trắng cả cao nguyên
+0.91  Ở Mộc Châu có đồi chè hình gì rất nổi tiếng?  |  Ở Mộc Châu có đôi chè hình gì rất nổi tiếng
+1.00  Hình trái tim  |  Hình trái tim
+1.00  Hình con cá  |  hình con cá
+0.33  Hình ngôi sao  |  Hình huy sáo
+0.80  Mộc Châu có đồi chè hình trái tim rất đẹp.  |  Mộc châu có đôi trẻ hình trái tim rất đẹp
+0.88  Mộc Châu nổi tiếng với con vật nào?  |  Mộc trâu nổi tiếng với con vật nào?
+0.50  Cá voi  |  Cả voi
+0.50  Bò sữa  |  Bỏ sữa
+0.33  Chim cánh cụt  |  Chìm cảnh cụt
+0.82  Mùa xuân ở Mộc Châu, hoa gì nở trắng núi đồi?  |  Mùa xuân ở Mộc Châu, hoa dì nở trắng núi đôi.
+0.00  Hoa sen  |  Hóa sinh.
+0.67  Hoa hướng dương  |  Hòa hướng dương
+0.92  Nghe Trâu Con nhờ, rồi chạm vào đúng những thứ cần tìm nhé!  |  Nghe châu con nhờ, rồi chạm vào đúng những thứ cần tìm nhé.
+0.78  Bạn đã giúp nông trại Mộc Châu thật giỏi!  |  Bạn đã giúp nông chạy một châu thật giỏi
+0.50  Hái 5 búp chè  |  Hãy nằm búp chè
+0.86  Tìm tất cả các bạn bò sữa  |  tìm tất cả các bạn bỏ sữa.
+1.00  Chạm vào tất cả bông hoa mận trắng  |  chạm vào tất cả bông hoa mận trắng.
