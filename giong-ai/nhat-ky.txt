@@ -102,3 +102,23 @@ Lô 4 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 0.83  Bánh chưng gói bằng lá dong.  |  Bánh chưng gói bằng lá rong
 1.00  Mẹ ngâm gạo nếp để gói bánh.  |  Mẹ ngâm gạo nếp để gói bánh
 0.75  Bánh chưng, bánh giầy  |  Bánh chưng, bánh dày
+Lô 19 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+0.82  Bánh chưng hình vuông tượng trưng cho đất, bánh giầy hình tròn tượng trưng cho trời – theo truyện cổ tích Lang Liêu.  |  Bánh trưng hình vuông, tượng trưng cho đất Bánh dày hình tròn, tượng trưng cho trời Theo chuyện cổ tích Lăng Liêu
+1.00  Tín ngưỡng thờ cúng Hùng Vương ở Phú Thọ đã được UNESCO ghi danh là di sản văn hoá phi vật thể của nhân loại.  |  Tín ngưỡng Thờ Cúng Hùng Vương ở Phú Thọ đã được UNESCO ghi danh là di sản văn hóa phi vật thể của nhân loại.
+0.89  Giỗ Tổ Hùng Vương vào ngày nào (âm lịch)?  |  Dỗ tổ Hùng Vương vào ngày nào, âm lịch
+0.67  Mùng 1 Tết  |  Một mốt tết
+1.00  Mùng 10 tháng 3  |  Mùng 10 tháng 3
+0.67  Rằm tháng 8  |  dằm tháng 8
+1.00  Bánh chưng có hình gì?  |  Bánh chưng có hình gì?
+1.00  Hình vuông  |  Hình vuông
+1.00  Hình tròn  |  Hình tròn
+1.00  Hình tam giác  |  Hình tam giác
+0.88  Bánh chưng hình vuông, tượng trưng cho đất.  |  Bánh chưng hình vuông, tượng chưng cho đất
+0.83  Trong truyện cổ tích, ai đã làm ra bánh chưng, bánh giầy?  |  Trong chuyện cổ tích, ai đã làm ra bánh chưng, bánh dày?
+0.00  Thánh Gióng  |  Thảnh sống
+0.50  Sơn Tinh  |  Sơn Tín
+0.00  Lang Liêu  |  Lạng lưu
+0.86  Hoàng tử Lang Liêu đã làm ra bánh chưng, bánh giầy dâng vua cha.  |  Hoàng tử Lang Liêu đã làm ra bánh chưng, bánh dày, dâng vua trà.
+0.93  Cùng Trâu Con gói bánh chưng! Chạm vào nguyên liệu theo đúng thứ tự nhé.  |  Cùng châu con gói bánh chưng, chạm vào nguyên liệu theo đúng thứ tự nhé.
+0.88  Gói bánh chưng: bắt đầu từ đâu nhỉ?  |  Gỏi bánh chưng, bắt đầu từ đâu nhỉ?
+0.86  Bánh chưng đã gói xong, thơm phức!  |  Bánh chưng đã gọi xong, thơm phức
