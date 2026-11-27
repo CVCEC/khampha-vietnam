@@ -93,3 +93,12 @@ Lô 4 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 0.88  Bánh chưng hình vuông tượng trưng cho đất, bánh giầy hình tròn tượng trưng cho trời.  |  Bánh trưng hình vuông, tượng trưng cho đất Bánh dày hình tròn, tượng trưng cho trời
 0.90  Lang Liêu là người làm ra bánh chưng, bánh giầy.  |  Lang Liêu là người làm ra bánh chưng, bánh dày.
 1.00  Hôm nay, mình đưa các bạn đến Đền Hùng ở tỉnh Phú Thọ.  |  Hôm nay, mình đưa các bạn đến Đền Hùng ở tỉnh Phú Thọ.
+0.50  bánh chưng  |  Bánh chương
+0.50  bánh giầy  |  Bánh sầy
+0.00  lá dong  |  Lã Dông
+0.50  gạo nếp  |  Rào nếp
+1.00  Tết đến, nhà em gói bánh chưng.  |  Tết đến, nhà em gói bánh chưng.
+0.80  Bánh giầy tròn và trắng.  |  Bánh dày tròn và trắng
+0.83  Bánh chưng gói bằng lá dong.  |  Bánh chưng gói bằng lá rong
+1.00  Mẹ ngâm gạo nếp để gói bánh.  |  Mẹ ngâm gạo nếp để gói bánh
+0.75  Bánh chưng, bánh giầy  |  Bánh chưng, bánh dày
