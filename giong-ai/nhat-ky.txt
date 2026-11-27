@@ -17,3 +17,23 @@ Lô 9 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 0.33  Con gà gáy ò ó o.  |  Con gà gầy ơ, ơ, ơ
 1.00  Buổi chiều, mặt trời lặn.  |  Buổi chiều, mặt trời lặn
 1.00  Cơm lam  |  Cơm Lam
+0.90  Gạo nếp cho vào ống tre non, nướng trên lửa. Bóc lớp tre ra là có cơm lam thơm dẻo.  |  Gạo nếp cho vào ống che non, nướng trên lửa, bóc lớp che ra là có cơm lam thơm dẻo.
+0.86  Bản A Pa Chải là nơi sinh sống của người Hà Nhì, nổi tiếng với những ngôi nhà có tường đất dày.  |  Bản A3 trải là nơi sinh sống của người Hà Nhi, nổi tiếng với những ngôi nhà có tường đất dày.
+0.70  A Pa Chải là điểm cực nào của Việt Nam?  |  A3 trai là điểm cực nao của Việt Nam?
+1.00  Cực Đông  |  cực đông
+0.00  Cực Tây  |  cục đầy
+0.00  Cực Nam  |  CỤC NÀM
+0.86  A Pa Chải ở xa nhất về phía Tây, nên là điểm cực Tây.  |  A3 trải ở xa nhất về phía Tây nên là điểm cực Tây.
+0.87  Ở A Pa Chải, một tiếng gà gáy có thể nghe thấy ở mấy nước?  |  Ở A3 trại, một tiếng gà gáy có thể nghe thấy ở mấy nước
+1.00  3 nước  |  Ba nước
+1.00  2 nước  |  hai nước
+1.00  5 nước  |  Năm nước
+1.00  Đây là ngã ba biên giới của Việt Nam, Lào và Trung Quốc.  |  Đây là ngã ba biên giới của Việt Nam, Lào và Trung Quốc.
+1.00  Cơm lam được nấu trong gì?  |  Cơm lam được nấu trong gì?
+0.50  Nồi đất  |  nối đất
+1.00  Lá chuối  |  Lá chuối
+0.00  Ống tre  |  ổng che
+0.75  Cơm lam được nấu trong ống tre non.  |  Cơm làm được nấu trong ống che non.
+0.92  Nghe Trâu Con hỏi rồi chạm vào đúng hướng trên la bàn nhé!  |  Nghe chú con hỏi rồi chạm vào đúng hướng trên la bàn nhé.
+0.89  Bạn đã thuộc bốn hướng Đông, Tây, Nam, Bắc!  |  Bạn đã thuộc 4 hướng Đông, Tây, Nam, Bắp
+1.00  Chạm vào hướng Bắc  |  chạm vào hướng Bắc.
