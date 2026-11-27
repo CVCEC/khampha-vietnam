@@ -138,3 +138,13 @@ Lô 8 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 1.00  Hà Nội là Thủ đô của Việt Nam.  |  Hà Nội là thủ đô của Việt Nam.
 1.00  Hồ Gươm còn gọi là hồ Hoàn Kiếm, nơi vua Lê Lợi trả gươm cho Rùa Vàng.  |  Hồ Gươm còn gọi là Hồ Hoàn Kiếm, nơi vua lê lợi trả gươm cho rùa vàng.
 1.00  Phố cổ Hà Nội có 36 phố phường, nhiều phố tên là "Hàng…".  |  Phố cổ Hà Nội có 36 phố phường. Nhiều phố tên là Hàng
+Lô 9 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+0.93  Hôm nay, mình đưa các bạn đến Hồ Gươm ở Thủ đô Hà Nội.  |  Hôm nay, mình đưa các bạn đến Hổ Gươm ở thủ đô Hà Nội.
+0.00  con rùa  |  CONDUO
+1.00  cây cầu  |  cây cầu
+0.00  phố cổ  |  phú cụ
+0.60  Hồ Gươm có nước xanh.  |  Hổ Gơm có nước xanh
+1.00  Con rùa bơi chậm chạp.  |  Con rùa bơi chậm chạp
+1.00  Cầu Thê Húc màu đỏ.  |  Cầu thê húc màu đỏ
+0.83  Phố cổ có nhiều cửa hàng.  |  Phố cụ có nhiều cửa hàng.
+1.00  Phở Hà Nội  |  Phở Hà Nội
