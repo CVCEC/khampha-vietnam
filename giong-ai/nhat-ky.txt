@@ -167,3 +167,8 @@ Lô 10 câu có đoạn cắt hỏng (Huế: đoạn quá ngắn) – chia đôi
 1.00  Thủ đô của Việt Nam là thành phố nào?  |  Thủ đô của Việt Nam là thành phố nào?
 0.00  Huế  |  Hỡi?
 1.00  Đà Nẵng  |  Đà Nẵng
+1.00  Hà Nội  |  Hà Nội
+1.00  Ngày xưa, mỗi phố "Hàng…" bán một thứ hàng. Chạm vào tên phố, rồi chạm vào món hàng của phố đó nhé!  |  Ngày xưa, mỗi phố hàng bán một thứ hàng. Chạm vào tên phố, rồi chạm vào món hàng của phố đó nhé.
+1.00  Bạn đã dạo hết các phố Hàng!  |  Bạn đã dạo hết các phố hàng.
+0.33  Phố Hàng Muối  |  phổ hàng mũi
+0.00  muối  |  Mối
