@@ -91,3 +91,5 @@ Lô 8 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 Lô 4 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
 0.87  Giỗ Tổ Hùng Vương là ngày mùng 10 tháng 3 âm lịch.  |  Dỗ tổ Hùng Vương là ngày 10 tháng 3 âm lịch.
 0.88  Bánh chưng hình vuông tượng trưng cho đất, bánh giầy hình tròn tượng trưng cho trời.  |  Bánh trưng hình vuông, tượng trưng cho đất Bánh dày hình tròn, tượng trưng cho trời
+0.90  Lang Liêu là người làm ra bánh chưng, bánh giầy.  |  Lang Liêu là người làm ra bánh chưng, bánh dày.
+1.00  Hôm nay, mình đưa các bạn đến Đền Hùng ở tỉnh Phú Thọ.  |  Hôm nay, mình đưa các bạn đến Đền Hùng ở tỉnh Phú Thọ.
