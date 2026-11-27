@@ -122,3 +122,9 @@ Lô 19 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.93  Cùng Trâu Con gói bánh chưng! Chạm vào nguyên liệu theo đúng thứ tự nhé.  |  Cùng châu con gói bánh chưng, chạm vào nguyên liệu theo đúng thứ tự nhé.
 0.88  Gói bánh chưng: bắt đầu từ đâu nhỉ?  |  Gỏi bánh chưng, bắt đầu từ đâu nhỉ?
 0.86  Bánh chưng đã gói xong, thơm phức!  |  Bánh chưng đã gọi xong, thơm phức
+0.33  Trải lá dong  |  Chài lá rong
+0.67  Đổ gạo nếp  |  Đồ gạo nếp
+1.00  Thêm đậu xanh  |  thêm đậu xanh
+1.00  Thêm thịt  |  thêm thịt
+1.00  Gói và buộc lạt  |  gói và buộc lạt
+1.00  Luộc bánh  |  luộc bánh
