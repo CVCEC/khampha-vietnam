@@ -148,3 +148,10 @@ Lô 9 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 1.00  Cầu Thê Húc màu đỏ.  |  Cầu thê húc màu đỏ
 0.83  Phố cổ có nhiều cửa hàng.  |  Phố cụ có nhiều cửa hàng.
 1.00  Phở Hà Nội  |  Phở Hà Nội
+Lô 20 câu có 7 câu lệch nhiều – có thể cắt sai, chia đôi để đọc lại
+Lô 10 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+1.00  Bát phở nóng hổi với bánh phở mềm, nước dùng thơm và thịt bò – món ăn sáng nổi tiếng của Hà Nội.  |  Bát phở nóng hổi với bánh phở mềm, nước dùng thơm và thịt bò. Món ăn sáng nổi tiếng của Hà Nội.
+0.87  Tên cầu Thê Húc có nghĩa là "nơi đậu ánh sáng mặt trời buổi sớm".  |  Tên cầu The Húc có nghĩa là nơi động ánh sáng mặt trời buổi sớm.
+0.86  Hồ Gươm còn có tên là gì?  |  Hồ Gương còn có tên là gì?
+0.00  Hồ Tây  |  Hô đầy
+0.67  Hồ Hoàn Kiếm  |  Hồ hoàn kiểm?
