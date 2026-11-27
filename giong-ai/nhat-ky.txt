@@ -88,3 +88,6 @@ Lô 8 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 1.00  Mình đang ở Đền Hùng, trên núi Nghĩa Lĩnh.  |  Mình đang ở Đền Hùng, trên núi Nghĩa Lĩnh.
 1.00  Nơi đây thờ các Vua Hùng – những người đã dựng nên nước Văn Lang xưa.  |  nơi đây thờ các vua hùng, những người đã dựng nên nước văn lang xưa.
 0.95  Ông bà ta có câu: "Dù ai đi ngược về xuôi, nhớ ngày giỗ Tổ mùng mười tháng ba".  |  Ông bà ta có câu, dù ai đi ngược về xuôi, nhớ ngày dỗ tổ mùng 10 tháng 3.
+Lô 4 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+0.87  Giỗ Tổ Hùng Vương là ngày mùng 10 tháng 3 âm lịch.  |  Dỗ tổ Hùng Vương là ngày 10 tháng 3 âm lịch.
+0.88  Bánh chưng hình vuông tượng trưng cho đất, bánh giầy hình tròn tượng trưng cho trời.  |  Bánh trưng hình vuông, tượng trưng cho đất Bánh dày hình tròn, tượng trưng cho trời
