@@ -7,3 +7,8 @@ Lô 17 câu – Gemini không trả tiếng: không có tiếng trả về: {"ca
 0.78  Ở A Pa Chải, một tiếng gà gáy, ba nước cùng nghe.  |  Ở apa trải, một tiếng gà gáy, ba nước cùng nghe.
 0.89  Cơm lam là gạo nếp nấu trong ống tre.  |  Cơm lam là gạo nếp nấu trong ống che.
 0.86  Hôm nay, mình đưa các bạn đến A Pa Chải ở tỉnh Điện Biên.  |  Hôm nay mình đưa các bạn đến A3 trải ở tỉnh Điện Biên.
+Lô 9 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+0.50  phía Tây  |  Phiết tây
+1.00  cột mốc  |  cột mốc
+1.00  con gà  |  Con gà
+1.00  mặt trời lặn  |  Mặt trời lặn
