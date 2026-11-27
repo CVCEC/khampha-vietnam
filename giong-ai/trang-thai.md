@@ -5,3 +5,4 @@
 - Đã có tiếng: **402 / 1256** câu (lần này thêm 158, dùng 30 lượt gọi)
 - Câu Whisper nghe hơi khác chữ (cần nghe kỹ, xem kiem-tra.tsv): 104
 - Câu bỏ qua theo yêu cầu (bo.txt): 0 · câu lỗi: 0
+- Ghi chú: Dừng vì đủ thời gian / số lượt của lần chạy này – lần sau làm tiếp.
