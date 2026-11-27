@@ -37,3 +37,6 @@ Lô 9 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 0.92  Nghe Trâu Con hỏi rồi chạm vào đúng hướng trên la bàn nhé!  |  Nghe chú con hỏi rồi chạm vào đúng hướng trên la bàn nhé.
 0.89  Bạn đã thuộc bốn hướng Đông, Tây, Nam, Bắc!  |  Bạn đã thuộc 4 hướng Đông, Tây, Nam, Bắp
 1.00  Chạm vào hướng Bắc  |  chạm vào hướng Bắc.
+Lô 5 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+1.00  Chạm vào hướng Tây  |  chạm vào hướng Tây
+1.00  Mặt trời mọc ở hướng nào?  |  Mặt trời mọc ở hướng nào?
