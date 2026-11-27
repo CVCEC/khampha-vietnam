@@ -82,3 +82,9 @@ Lô 18 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.50  Hái 5 búp chè  |  Hãy nằm búp chè
 0.86  Tìm tất cả các bạn bò sữa  |  tìm tất cả các bạn bỏ sữa.
 1.00  Chạm vào tất cả bông hoa mận trắng  |  chạm vào tất cả bông hoa mận trắng.
+Lô 17 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+Lô 8 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+0.83  Trâu Con đi ô tô về vùng trung du Phú Thọ, ngang qua những đồi chè xanh mướt.  |  Châu con đi ô tô về vùng Trung Du Phú Thọ, ngang qua những đổi trẻ xanh mướt.
+1.00  Mình đang ở Đền Hùng, trên núi Nghĩa Lĩnh.  |  Mình đang ở Đền Hùng, trên núi Nghĩa Lĩnh.
+1.00  Nơi đây thờ các Vua Hùng – những người đã dựng nên nước Văn Lang xưa.  |  nơi đây thờ các vua hùng, những người đã dựng nên nước văn lang xưa.
+0.95  Ông bà ta có câu: "Dù ai đi ngược về xuôi, nhớ ngày giỗ Tổ mùng mười tháng ba".  |  Ông bà ta có câu, dù ai đi ngược về xuôi, nhớ ngày dỗ tổ mùng 10 tháng 3.
