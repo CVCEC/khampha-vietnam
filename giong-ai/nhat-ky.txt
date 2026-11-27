@@ -160,3 +160,10 @@ Lô 10 câu – Gemini không trả tiếng: không có tiếng trả về: {"ca
 1.00  Trong truyền thuyết, vua Lê Lợi trả gươm cho con vật nào?  |  Trong truyền thuyết, vua Lê Lợi trả gươm cho con vật nào.
 0.50  Rùa Vàng  |  rùa vang
 1.00  Con rồng  |  Con rồng
+Lô 10 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+Lô 10 câu có đoạn cắt hỏng (Huế: đoạn quá ngắn) – chia đôi để đọc lại
+0.50  Cá chép  |  Cắt chép
+0.75  Vua Lê Lợi trả gươm thần cho Rùa Vàng ở Hồ Gươm.  |  Vua Lê Lội trả gương thần cho rùa vàng ở hồ gương.
+1.00  Thủ đô của Việt Nam là thành phố nào?  |  Thủ đô của Việt Nam là thành phố nào?
+0.00  Huế  |  Hỡi?
+1.00  Đà Nẵng  |  Đà Nẵng
