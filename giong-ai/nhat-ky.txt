@@ -93,3 +93,8 @@ Lô 9 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 1.00  Vịnh Hạ Long đã được UNESCO công nhận là di sản thiên nhiên thế giới.  |  Vịnh Hạ Long đã được UNESCO công nhận là di sản thiên nhiên thế giới.
 1.00  Vịnh Hạ Long có khoảng bao nhiêu hòn đảo?  |  Vịnh Hạ Long có khoảng bao nhiêu hòn đảo?
 1.00  Khoảng 10  |  khoảng mười
+1.00  Gần 2.000  |  gần 2.000
+1.00  Khoảng 50  |  khoảng 50.
+1.00  Tên "Hạ Long" có nghĩa là gì?  |  Tên Hạ Long có nghĩa là gì?
+0.67  Rồng đáp xuống  |  Dòng đáp xuống
+1.00  Biển xanh  |  Biển xanh
