@@ -47,3 +47,11 @@ Lô 8 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.67  Chợ Bến Thành  |  Chợ biến thành
 1.00  Cột cờ Lũng Cú  |  Cột cờ lũng cú
 1.00  "Tiên học lễ, hậu học văn" nghĩa là gì?  |  Tiên học lễ, hậu học văn, nghĩa là gì?
+1.00  Chỉ cần học chữ  |  Chỉ cần học chữ
+1.00  Trước học lễ phép, sau học chữ  |  trước học lễ phép, sau học chữ
+1.00  Học chơi trước, học bài sau  |  Học chơi trước, học bài sau
+1.00  Ông cha dạy: phải học lễ phép trước, rồi mới học chữ.  |  Ông cha dạy phải học lễ phép trước, rồi mới học chữ.
+1.00  Chữ viết chúng ta dùng ngày nay là chữ gì?  |  Chữ viết chúng ta dùng ngày nay là chữ gì?
+0.50  Chữ Hán  |  Chữ hẳn
+0.50  Chữ Nôm  |  Chữ NOM
+1.00  Chữ Quốc ngữ  |  Chữ quốc ngữ
