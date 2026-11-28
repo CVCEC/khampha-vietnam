@@ -98,3 +98,13 @@ Lô 9 câu – Gemini không trả tiếng: không có tiếng trả về: {"can
 1.00  Tên "Hạ Long" có nghĩa là gì?  |  Tên Hạ Long có nghĩa là gì?
 0.67  Rồng đáp xuống  |  Dòng đáp xuống
 1.00  Biển xanh  |  Biển xanh
+1.00  Núi cao  |  Núi cao
+1.00  Vịnh Hạ Long thuộc tỉnh nào?  |  Vịnh Hạ Long thuộc tỉnh nào?
+1.00  Quảng Ninh  |  Quảng Ninh
+1.00  Vịnh Hạ Long thuộc tỉnh Quảng Ninh.  |  Vịnh Hạ Long thuộc tỉnh Quảng Ninh
+0.96  Các bạn sinh vật biển đang trốn sau những hòn đảo. Nghe Trâu Con gọi tên, rồi chạm vào hòn đảo để tìm bạn ấy nhé!  |  Các bạn sinh vật biển đang trốn sau những hòn đảo, nghe châu con gọi tên rồi chạm vào hòn đảo để tìm bạn ấy nhé
+1.00  Bạn đã tìm thấy tất cả các bạn ở vịnh Hạ Long!  |  bạn đã tìm thấy tất cả các bạn ở Vịnh Hạ Long.
+1.00  con cua  |  con cua
+1.00  con ốc  |  Con ốc
+0.00  con tôm  |  Còn tùm.
+1.00  con mực  |  Con mực
