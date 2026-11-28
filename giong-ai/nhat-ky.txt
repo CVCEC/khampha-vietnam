@@ -37,3 +37,13 @@ Lô 9 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.86  Bia đá ghi tên người học giỏi.  |  Bia đá, ghi tên người học dòi
 1.00  chữ viết  |  Chữ viết
 1.00  Em tập viết chữ thật đẹp.  |  Em tập viết chữ thật đẹp
+Lô 16 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+Lô 8 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+1.00  Xin chữ ngày Tết  |  Xin chữ ngày Tết
+1.00  Dịp Tết, nhiều người đến Văn Miếu xin ông đồ viết chữ đẹp, như chữ "Phúc" hay chữ "Học", mang về nhà để mong một năm học hành chăm chỉ.  |  Dịp Tết, nhiều người đến Văn Miếu xin ông Đồ viết chữ đẹp như chữ Phúc hay chữ Học mang về nhà để mong một năm học hành chăm chỉ.
+1.00  Ngày xưa ông cha ta học chữ Hán. Sau đó người Việt sáng tạo ra chữ Nôm để ghi tiếng Việt. Ngày nay chúng ta dùng chữ Quốc ngữ, viết bằng các chữ cái a, b, c. Thầy giáo Chu Văn An nổi tiếng từng dạy học ở Quốc Tử Giám.  |  Ngày xưa, ông cha ta học chữ Hán Sau đó người Việt sáng tạo ra chữ Nôm để ghi tiếng Việt Ngày nay chúng ta dùng chữ quốc ngữ viết bằng các chữ cái A, B, C Thầy giáo Chu Văn An nổi tiếng từng dạy học ở quốc tử giám
+1.00  Trường đại học đầu tiên của Việt Nam là gì?  |  Trường Đại học đầu tiên của Việt Nam là gì?
+0.67  Quốc Tử Giám  |  Quốc tử giảm
+0.67  Chợ Bến Thành  |  Chợ biến thành
+1.00  Cột cờ Lũng Cú  |  Cột cờ lũng cú
+1.00  "Tiên học lễ, hậu học văn" nghĩa là gì?  |  Tiên học lễ, hậu học văn, nghĩa là gì?
