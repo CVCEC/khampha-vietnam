@@ -6,3 +6,13 @@
 0.50  đồ bạc  |  ĐU BẠC
 1.00  Phố Hàng Mã  |  phố hàng mã
 1.00  đèn Trung thu  |  đèn trung thu
+0.86  Từ Hồ Gươm, Trâu Con đi xích lô tới Văn Miếu – Quốc Tử Giám.  |  Từ Hồ Gương, châu con đi xích lô tới Văn Miếu, quốc tử giám
+1.00  Mình đang ở Văn Miếu – Quốc Tử Giám.  |  Mình đang ở Văn Miếu, quốc tử giám.
+0.93  Quốc Tử Giám là trường đại học đầu tiên của Việt Nam, có từ năm 1076, gần 1.000 năm trước!  |  Quốc tử giám là trường đại học đầu tiên của Việt Nam, có từ năm 1076, gần 1000 năm trước.
+1.00  Kia là Khuê Văn Các, biểu tượng của Thủ đô Hà Nội.  |  Kia là khuê Văn Các, biểu tượng của thủ đô Hà Nội.
+1.00  Ở đây có 82 tấm bia đá đặt trên lưng rùa, ghi tên những người học giỏi đỗ tiến sĩ ngày xưa.  |  Ở đây có 82 tấm bia đá đặt trên lưng rùa, ghi tên những người học giỏi đỗ tiến sĩ ngày xưa.
+1.00  Quốc Tử Giám là trường đại học đầu tiên của Việt Nam, có từ năm 1076.  |  Quốc tử giám là trường đại học đầu tiên của Việt Nam, có từ năm 1076.
+1.00  Tiên học lễ, hậu học văn: trước học lễ phép, sau học chữ.  |  Tiên học lễ, hậu học văn, trước học lễ phép, sau học chữ
+1.00  Chữ viết của người Việt: ngày xưa học chữ Hán, rồi có chữ Nôm, nay dùng chữ Quốc ngữ.  |  Chữ viết của người Việt Ngày xưa học chữ Hán, rồi có chữ Nôm nay dùng chữ Quốc ngữ
+1.00  82 bia tiến sĩ đặt trên lưng rùa đá, ghi tên những người học giỏi.  |  82 bia tiến sĩ đặt trên lưng rùa đá, ghi tên những người học giỏi.
+0.94  Hôm nay, mình đưa các bạn đến Văn Miếu – Quốc Tử Giám ở Thủ đô Hà Nội.  |  Hôm nay, mình đưa các bạn đến phần miếu Quốc tử giám ở thủ đô Hà Nội.
