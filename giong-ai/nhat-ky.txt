@@ -55,3 +55,11 @@ Lô 8 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.50  Chữ Hán  |  Chữ hẳn
 0.50  Chữ Nôm  |  Chữ NOM
 1.00  Chữ Quốc ngữ  |  Chữ quốc ngữ
+Lô 12 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+Lô 6 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+1.00  Ngày nay chúng ta dùng chữ Quốc ngữ, viết bằng chữ cái a, b, c.  |  Ngày nay chúng ta dùng chữ quốc ngữ viết bằng chữ cái A, B, C
+0.94  Chạm vào các chữ theo đúng thứ tự để viết lại những câu Trâu Con vừa học nhé!  |  Chạm vào các chữ theo đúng thứ tự để viết lại những câu châu con vừa học nhé!
+1.00  Bạn đã nhớ lời dạy của ông cha: Tiên học lễ, hậu học văn!  |  Bạn đã nhớ lời dạy của ông cha Tiên học lễ, hậu học văn
+0.50  Tiên học  |  Tiến Học
+0.00  lễ,  |  Lỡy hậu
+0.67  hậu học  |  Học
