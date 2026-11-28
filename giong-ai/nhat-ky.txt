@@ -63,3 +63,9 @@ Lô 6 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 0.50  Tiên học  |  Tiến Học
 0.00  lễ,  |  Lỡy hậu
 0.67  hậu học  |  Học
+1.00  văn  |  Văn
+1.00  Tiên học lễ, hậu học văn!  |  Tiên học lễ Hậu học văn
+1.00  Chữ Hán,  |  Chữ hán
+1.00  rồi chữ Nôm,  |  Rồi chữ nôm
+0.50  nay là  |  Nay lạ
+1.00  Chữ Hán, rồi chữ Nôm, nay là chữ Quốc ngữ!  |  Chữ hán, rồi chữ nôm NAY là chữ quốc ngữ
