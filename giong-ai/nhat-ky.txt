@@ -69,3 +69,20 @@ Lô 6 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 1.00  rồi chữ Nôm,  |  Rồi chữ nôm
 0.50  nay là  |  Nay lạ
 1.00  Chữ Hán, rồi chữ Nôm, nay là chữ Quốc ngữ!  |  Chữ hán, rồi chữ nôm NAY là chữ quốc ngữ
+Lô 16 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+0.94  Trâu Con lên một chiếc thuyền buồm nâu, chầm chậm đi giữa những hòn đảo đá vôi.  |  châu con lên một chiếc thuyền buồm nâu, chầm chậm đi giữa những hòn đảo đá vôi.
+0.83  Woa, Vịnh Hạ Long đẹp quá!  |  Wow! Vịnh Hạ Long đẹp quá!
+1.00  Ở đây có gần 2.000 hòn đảo lớn nhỏ.  |  Ở đây có gần 2.000 hòn đảo lớn nhỏ.
+0.85  Truyền thuyết kể rằng ngày xưa, Rồng Mẹ và đàn rồng con bay xuống giúp dân đánh giặc, nhả ngọc tạo thành những hòn đảo này.  |  Chuyển thuyết kể rằng, ngày xưa, dồng mẹ và đàn dồng con bay xuống giúp dân đánh giặc, nhà Ngọc tạo thành những hòn đảo này.
+0.92  Vì thế mới có tên "Hạ Long" – nghĩa là rồng đáp xuống!  |  Vì thế mới có tên Hạ Long, nghĩa là dòng đáp xuống.
+1.00  Vịnh Hạ Long có gần 2.000 hòn đảo lớn nhỏ.  |  Vịnh Hạ Long có gần 2.000 hòn đảo lớn nhỏ.
+0.86  "Hạ Long" nghĩa là rồng đáp xuống.  |  Hạ long, nghĩa là dòng đáp xuống.
+1.00  Vịnh Hạ Long thuộc tỉnh Quảng Ninh, là di sản thiên nhiên thế giới.  |  Vịnh Hạ Long thuộc tỉnh Quảng Ninh là di sản thiên nhiên thế giới.
+0.93  Hôm nay, mình đưa các bạn đến vịnh Hạ Long ở tỉnh Quảng Ninh.  |  Hôm nay, mình đưa các bạn đến vị Hạ Long ở tỉnh Quảng Ninh.
+1.00  con thuyền  |  Con thuyền
+0.00  con cá  |  Còn cả?
+0.83  Hòn đảo nhô lên giữa biển.  |  Hòn đảo nhu lên giữa biển.
+0.80  Con thuyền đi trên vịnh.  |  Con thuyền đi trên vĩnh
+1.00  Con rồng bay trên trời.  |  Con rồng bay trên trời
+1.00  Con cá bơi dưới nước.  |  Con cá bơi dưới nước
+1.00  Chả mực Hạ Long  |  Chả mực hạ long
