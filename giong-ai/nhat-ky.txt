@@ -16,3 +16,14 @@
 1.00  Chữ viết của người Việt: ngày xưa học chữ Hán, rồi có chữ Nôm, nay dùng chữ Quốc ngữ.  |  Chữ viết của người Việt Ngày xưa học chữ Hán, rồi có chữ Nôm nay dùng chữ Quốc ngữ
 1.00  82 bia tiến sĩ đặt trên lưng rùa đá, ghi tên những người học giỏi.  |  82 bia tiến sĩ đặt trên lưng rùa đá, ghi tên những người học giỏi.
 0.94  Hôm nay, mình đưa các bạn đến Văn Miếu – Quốc Tử Giám ở Thủ đô Hà Nội.  |  Hôm nay, mình đưa các bạn đến phần miếu Quốc tử giám ở thủ đô Hà Nội.
+Lô 19 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+Lô 9 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+1.00  Quốc Tử Giám là trường đại học đầu tiên của Việt Nam.  |  Quốc tử giám là trường đại học đầu tiên của Việt Nam
+0.84  Trường có từ năm 1076, gần một nghìn năm trước!  |  trường có từ năm 1076, gần 1000 năm trước.
+1.00  Ông bà ta dạy: Tiên học lễ, hậu học văn.  |  Ông bà ta dạy, tiên học lễ, hậu học văn.
+1.00  Nghĩa là: trước học lễ phép, sau học chữ.  |  nghĩa là trước học lễ phép sau học chữ
+1.00  Lễ phép là biết chào hỏi, biết kính trọng thầy cô, ông bà và cha mẹ.  |  Lễ phép là biết chào hỏi, biết kính trọng thầy cô, ông bà và cha mẹ.
+1.00  Chữ viết của người Việt có một hành trình dài.  |  Chữ viết của người Việt có một hành trình dài.
+1.00  Ngày xưa, ông cha ta học chữ Hán.  |  Ngày xưa, ông cha ta học chữ Hán.
+0.92  Sau đó, người Việt sáng tạo ra chữ Nôm để ghi tiếng Việt.  |  Sau đó, người Việt sáng phạo ra chữ Nôm để ghi tiếng Việt.
+0.88  Ngày nay, chúng mình dùng chữ Quốc ngữ, viết bằng các chữ cái a, bờ, cờ.  |  Ngày nay chúng mình dùng chữ quốc ngữ viết bằng các chữ cái A, B, C.
