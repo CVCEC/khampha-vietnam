@@ -86,3 +86,10 @@ Lô 16 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
 1.00  Con rồng bay trên trời.  |  Con rồng bay trên trời
 1.00  Con cá bơi dưới nước.  |  Con cá bơi dưới nước
 1.00  Chả mực Hạ Long  |  Chả mực hạ long
+Lô 19 câu: khoảng lặng chưa rõ, cắt theo mốc chữ của Whisper
+Lô 19 câu có đoạn cắt hỏng (con ốc: đoạn quá ngắn) – chia đôi để đọc lại
+Lô 9 câu – Gemini không trả tiếng: không có tiếng trả về: {"candidates": [{"finishReason": "SAFETY", "index": 0, "finishMessage": "The audio stream could not be completed. Please retry your reque
+0.95  Mực tươi được giã tay rồi rán vàng, giòn dai thơm ngon – đặc sản nổi tiếng của Quảng Ninh.  |  Mực tươi được dã tay, rồi rán vàng, giòn dai thơm ngon, đặc sản nổi tiếng của Quảng Ninh.
+1.00  Vịnh Hạ Long đã được UNESCO công nhận là di sản thiên nhiên thế giới.  |  Vịnh Hạ Long đã được UNESCO công nhận là di sản thiên nhiên thế giới.
+1.00  Vịnh Hạ Long có khoảng bao nhiêu hòn đảo?  |  Vịnh Hạ Long có khoảng bao nhiêu hòn đảo?
+1.00  Khoảng 10  |  khoảng mười
